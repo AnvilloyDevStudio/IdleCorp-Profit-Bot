@@ -1,0 +1,2 @@
+Now the ratio won't show as 1:1 when it's not 1:1
+Details pleace look at Readme.txt

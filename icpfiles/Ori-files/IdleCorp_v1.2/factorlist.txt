@@ -1,0 +1,281 @@
+tree farm
+$100.00
+Produces
+| 2x wood
+Every 00:05
+
+oil well
+$300.00
+Produces
+| 10x crude oil
+Every 00:10
+
+coal mine
+$400.00
+Produces
+| 8x coal
+Every 00:10
+
+iron mine
+$550.00
+Produces
+| 1x iron
+Every 00:20
+
+oil refinery
+$1,050.00
+Consumes
+| 5x crude oil
+Produces
+| 1x gasoline
+Every 00:30
+
+steel mill
+$1,200.00
+Consumes
+| 1x iron
+| 4x coal
+Produces
+| 1x steel
+Every 00:35
+
+bauxite mine
+$1,300.00
+Produces
+| 40x bauxite
+Every 00:25
+
+rubber factory
+$1,500.00
+Consumes
+| 8x crude oil
+Produces
+| 1x rubber
+Every 00:40
+
+gas station
+$1,800.00
+Consumes
+| 2x gasoline
+Produces
+| $15.00
+Every 00:15
+
+furniture factory
+$2,000.00
+Consumes
+| 10x wood
+Produces
+| 1x furniture
+Every 04:00
+
+aluminum factory
+$3,750.00
+Consumes
+| 10x bauxite
+Produces
+| 3x aluminum
+Every 00:25
+
+led factory
+$5,000.00
+Consumes
+| 2x silicon
+Produces
+| 40x led
+Every 00:50
+
+polyester factory
+$6,000.00
+Consumes
+| 110x crude oil
+Produces
+| 14x polyester
+Every 00:25
+
+silicon mine
+$9,000.00
+Produces
+| 4x silicon
+Every 03:20
+
+bicycle factory
+$10,000.00
+Consumes
+| 12x steel
+| 8x rubber
+Produces
+| 1x bicycle
+Every 01:30
+
+gold mine
+$20,000.00
+Produces
+| 4x gold
+Every 05:00
+
+lamp factory
+$28,000.00
+Consumes
+| 6x plastic
+| 12x led
+Produces
+| 2x lamp
+Every 00:15
+
+cotton farm
+$30,000.00
+Produces
+| 4x cotton
+Every 00:20
+
+plastic factory
+$50,000.00
+Consumes
+| 20x crude oil
+Produces
+| 200x plastic
+Every 00:25
+
+ccd factory
+$69,000.00
+Consumes
+| 6x silicon
+Produces
+| 1x ccd
+Every 01:05
+
+glass factory
+$80,000.00
+Consumes
+| 2x silicon
+Produces
+| 8x glass
+Every 00:35
+
+cpu factory
+$100,000.00
+Consumes
+| 1x gold
+| 8x silicon
+Produces
+| 5x cpu
+Every 02:00
+
+clothing factory
+$160,000.00
+Consumes
+| 20x polyester
+| 10x cotton
+Produces
+| 10x clothing
+Every 00:40
+
+
+cell phone factory
+$400,000.00
+Consumes
+| 5x plastic
+| 1x glass
+| 1x cpu
+Produces
+| 1x cell phone
+Every 00:45
+
+coal power plant
+$500,000.00
+Consumes
+| 50x coal
+Produces
+| 35x energy
+Every 00:30
+
+laptop factory
+$800,000.00
+Consumes
+| 8x plastic
+| 2x glass
+| 1x cpu
+Produces
+| 1x laptop
+Every 01:30
+
+research chemical factory
+$800,000.00
+Consumes
+| 10x crude oil
+Produces
+| 4x research chemical
+Every 00:30
+
+solar power plant
+$1,000,000.00
+Produces
+| 60x energy
+Every 01:30
+
+rocket fuel factory
+$1,000,000.00
+Consumes
+| 10x energy
+Produces
+| 1x rocket fuel
+Every 15:00
+
+digital camera factory
+$1,400,000.00
+Consumes
+| 1x ccd
+| 100x plastic
+Produces
+| 1x digital camera
+Every 01:20
+
+television factory
+$1,500,000.00
+Consumes
+| 36x plastic
+| 12x glass
+| 1x cpu
+Produces
+| 1x television
+Every 03:00
+
+gasoline engine factory
+$2,000,000.00
+Consumes
+| 15x steel
+| 6x rubber
+Produces
+| 1x gasoline engine
+Every 04:20
+
+car factory
+$10,000,000.00
+Consumes
+| 1x gasoline engine
+| 1,000x plastic
+| 28x glass
+| 40x steel
+| 1x cpu
+| 30x rubber
+Produces
+| 1x car
+Every 10:00
+
+prescription drug factory
+$15,000,000.00
+Consumes
+| 1x research chemical
+Produces
+| 2x prescription drug
+Every 00:50
+
+airport
+$20,000,000.00
+Consumes
+| 10x jet fuel
+| 25x energy
+Produces
+| $1,000.00
+Every 01:00 to 00:30

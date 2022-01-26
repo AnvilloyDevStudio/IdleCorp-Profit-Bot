@@ -1,0 +1,268 @@
+{
+    "guide": [
+        {
+            "structure_version": "1.1",
+            "version": "2021-05-22",
+            "pages": [
+                {
+                    "name": "intro",
+                    "content": [
+                        ["Hello, Newcomer! Welcome to IdleCorp Discord server, run by professional IdleCorp players and the bot developer. This text intends to shed some light on features and mechanics you might find confusing, and get your factories running as soon as possible without overwhelming you on Day 1. This text __**is not going to have a list of IdleCorp setups as I'd like for you to discover and learn about the bot first.**__",
+                        "",
+                        "```Last Updated: 22/05/2021",
+                        "```",
+                        "",
+                        "  - Run the `$$tutorial` command to learn about some of the commands you will be frequently using during your first playthrough, and set your first facilities up. This command is going to introduce you to the game's mechanics and help you get a general sense of how things work.",
+                        "  - Table of Contents:",
+                        "      • Assets",
+                        "      • Facilities & Production",
+                        "      • Trading & Market",
+                        "      • Research & Technology",
+                        "      • Region & Logistics",
+                        "      • Modifiers & Services",
+                        "      • Reincorporation & Miscellaneous",
+                        "",
+                        "__**DISCLAIMER:**__"],
+                        ["  - This message may see changes over time, depending on changes made to IdleCorp. The date of the last update will be shown.",
+                        "  - This guide does not cover all of IdleCorp's features. Extensive guide can be accessed by running $$help or by visiting the Wiki that's run, edited and updated by both the bot developer and IdleCorp players.",
+                        "Link to IdleCorp Wiki: https://wiki.idlecorp.xyz/index.php/Main_Page",
+                        "  - Try to use `$$examine <asset/facility/service/policy>` command to get concise information on a specific matter that you need help about.",
+                        "  - If this text lacks the information you need, feel free to ask a question in #help (You are here!)."]
+                    ]
+                },
+                {
+                    "name": "assets",
+                    "content": [
+                        ["__**ASSETS**__"],
+                        ["  - Assets from facilities are generated within a time frame. Those assets can then be sold to get capital. Certain assets are considered prerequisites, meaning they are required to either build facilities or be consumed to make another asset. The best example to this is the steel mill, which you may build early on, which consumes 4 coal and 1 iron to produce 1 steel.",
+                        "  - A lot of the assets can be purchased with `$$buy`. This command, like many commands, has certain specifiers. This command is commonly used by players who are focusing on producing a certain asset that requires more than 2 prerequisites. It is a key command you will be frequently using early-mid stages. ",
+                        "  - A lot of the assets can also be scrapped with `$$scrap`. This command does not give you an asset that you can sell. You can use scraps to give your factories experience and level them up with `$$addxp <facility> <amount>`.",
+                        "  - Facilities with experience can produce the Plus variant of an asset, given that the produced asset's Plus variant exists. Plus variants cost more than the normal asset. When your factories have more experience, the chances of an asset being a Plus variant increases. Another method to increase the chance is using plus variants of prerequisites or using technology. Consumption of Plus assets are turned OFF by default. You need to use the command `$$scp <facility>` to have them consume said assets. This can be turned off by `$$ucp <facility>`.",
+                        "  - Lands are the only exception to most of these rules. They cannot be sold or transported."]
+                    ]
+                },
+                {
+                    "name": "facilities and production",
+                    "content": [
+                        ["__**FACILITIES & PRODUCTION**__"],
+                        ["  - Almost every facility in game produces assets which you can sell for capital.",
+                        "  - Facility amount depends on how much land you have. You cannot build 2 facilities on a single land.",
+                        "  - Production times can be shortened or extended. These mostly depend on the tech you have in the region and the regional production modifiers.",
+                        "  - Passive Efficiency is determined by the amount of prerequisite assets you're producing to continually supply a factory that needs one. If you are __**producing**__ enough prerequisites, your factory's passive efficiency is going to be at 100% and will not need extra purchases to keep it running. ",
+                        "  - There are LOTS of facilities in the game, don't be afraid to experiment with them! Try out different facilities and play-styles to see what suits you best. See `$$faclist` for a complete list of facilities you can build on IdleCorp."]
+                    ]
+                },
+                {
+                    "name": "trading and market",
+                    "content": [
+                        ["__**TRADING & MARKET**__"],
+                        ["  - Trading with other players is a crucial part of IdleCorp. All sorts of assets can be traded on IdleCorp, ranging from wood to trucks.",
+                        "  - `$$price` command shows you the existing assets, how much they cost, if they're tradable, if they can be scrapped and if they can be sold on retail stores. The scale icon indicates that it's tradable. Shopping bags indicate that the asset can be sold on retail stores and is scrappable.",
+                        "  - Two types of markets exist. One of them is the NPC market, the other is the global player market.",
+                        "  - NPC market has unlimited assets. The only restriction to your purchases from the NPC market is your **hourly buy limit which can be viewed with $$cap**. The hourly buy limit can be increased by building more Logistics Centers.",
+                        "  - Global market access always requires at least one Logistics Center to be built. Global market is where players sell to and buy from other players. However, assets on global market are limited, and asset prices may vary depending on who sells the asset. Hourly buy limit is not affected when you buy assets from the global market."]
+                    ]
+                },
+                {
+                    "name": "research and technology",
+                    "content": [
+                        ["__**RESEARCH & TECHNOLOGY**__"],
+                        ["  - Researching is another crucial part of IdleCorp. Researching yields blueprints, which you need to develop it into a technology with `$$dev <blueprint>`. You need at least one research facility, 1 million energy and capital to start a research.",
+                        "  - Researching requires energy, an asset that can be generated using solar power plants or coal power plants. Energy can be purchased on global market as well as the NPC market. Coal power plant, as the name suggests, requires a steady supply of coal to continually produce energy. Solar power plants do not need to be supplied.",
+                        "  - You can build a maximum of 8 research facilities in one region. Each research facility brings up the chances of you getting a rarer blueprint. After 6 research facilities, the research cost also goes up by 500k energy+, which cannot be purchased from NPC market. 8 research facilities need 1 million energy, 1 million energy+ and 1 million capital to start a research.",
+                        "  - A research can take up to 3 hours to finish, but can be completed instantly with 4 gratitude points, which are earned by voting.",
+                        "  - Technologies can be traded. Fun fact, technology used to be the only asset which could be traded. Blueprints cannot be traded on the market, but can be sold to NPC market for 4 million capital.",
+                        "  - Some of the technologies can be combined to create an \"u\"pgraded version. You need three of the same technology to combine them. You can also combine the upgraded versions to create an UU version of the tech.",
+                        "  - Some technologies can be stacked to multiply their effects.",
+                        "  - Up to 6 technology slots can be unlocked by using reincorporation tokens."]
+                    ]
+                },
+                {
+                    "name": "region and logistics",
+                    "content": [
+                        ["__**REGION & LOGISTICS**__"],
+                        ["  - Regions are individual servers with their own unique statistics. They are where your assets are stored, and where your facilities are located.",
+                        "  - Every region is assigned a region code that can be viewed with `$$rc`.",
+                        "  - Assets can be transported between regions with `$$export(all) <region code> <asset> <amount>`. Exporting requires trucks, an asset which can be produced, or be bought from other players. Trucks need gasoline, which can be purchased from NPC market. Exports normally take 30 minutes, this time can be decreased with truck+ by 15 minutes. You can export a maximum of three times from a region. Technologies and blueprints can also be transported. Lands or facilities cannot be exported to another region. Capital is shared across regions.",
+                        "  - Do `$$logistics` to view the amount of trucks and gasoline you have, and your inboxes.",
+                        "  - There are two types of inboxes, one of them is regional and one of them is global. Inboxes are where your trucks, assets and capital come to before you claim them with `$$claim <arrivals/inbox>`.",
+                        "  - Each Logistics Center increases your hourly buy limit by 2 million dollars."]
+                    ]
+                },
+                {
+                    "name": "modifiers and services",
+                    "content": [
+                        ["__**MODIFIERS & SERVICES**__"],
+                        ["  - Regions have production modifiers that change every week. These modifiers affect the time it takes for a facility to produce an asset.",
+                        "  - Happiness is another production modifier that decreases production time if it is increased.",
+                        "  - Services are bonuses which modify various stats of your region. These range from happiness to a bonus on your factories' levels. These require a significant amount of money to unlock. Unlike assets, services are donated money to with `$$ds <service> <capital>`. This means that you get to pay as small as you want, and unlock it over time.",
+                        "  - Policies can be enacted to make significant boosts to your region. These can be viewed with `$$policies`.",
+                        "  - Policies can only be enacted by the Regional Legislator. Enacting policies require Funding Points (FP).",
+                        "  - Regional policies require Region Office service to be unlocked. This allows your players to participate in elections, any player who has the Voter's Boon and 10 million capital can become a candidate for the Regional Legislator spot by typing `$$joinballot`. Players then have to vote for the candidate they see fit with `$$voteballot <mention user>`. Voters also need Voter's Boon to vote for a candidate."]
+                    ]
+                },
+                {
+                    "name": "reincorporation and miscellaneous",
+                    "content": [
+                        ["__**REINCORPORATION & MISCELLANEOUS**__"],
+                        ["  - As with all Idle Tycoon games, restarting your company is a really important part of IdleCorp. It unlocks significant bonuses, reincorporation points, reincorporation tokens and gives you 1,000 Pass XP for each billion of your net worth.",
+                        "  - It is recommended to reincorporate at 10 billion net worth, as no more reincorporation token can be earned afterwards, unless you purchase any of the premium ranks. Reincorporation score is a value that can go up as high as your net worth, so is Pass XP.",
+                        "  - Reincorporation tokens can be used with `$$usetoken <bonus>`. Using the command without specifying a bonus shows you a window displaying the bonuses you can use your tokens on.",
+                        "  - Your free starting land is going to be given to you in the region you reincorporate.",
+                        "  - If you've progressed a bit in a region different than the one you intended to, you can $$liquidate to sell and demolish everything (including land) to move to a different region.",
+                        "  - Before reincorporating or liquidating, make sure to remove installed technology and check player market to see if you can sell your assets to other people.",
+                        "  - Land prices are exponential. The more you buy land, the more its price increases."],
+                        ["",
+                        "",
+                        "This concludes this guide for now! It has been wonderful to closely interact with the members of this community to make this guide. Any feedback on it is highly appreciated!"]
+                    ]
+                },
+                {
+                    "name": "thanks",
+                    "content": [
+                        "Special thanks to:",
+                        "Teemaw for making this possible,",
+                        "Punisher",
+                        "XPARAD0X",
+                        "avalidname",
+                        "BossMan",
+                        "Moykhaile",
+                        "Drathmar for their valuable feedback and perfecting this guide!"
+                    ]
+                }
+            ]
+        },
+        {
+            "structure_version": "1.1",
+            "version": "2021-08-28",
+            "pages": [
+                {
+                    "name": "intro",
+                    "content": [
+                        ["Hello, Newcomer! Welcome to IdleCorp Discord server, run by professional IdleCorp players and the bot developer. This text intends to shed some light on features and mechanics you might find confusing, and get your factories running as soon as possible without overwhelming you on Day 1. This text __**is not going to have a list of IdleCorp setups as I'd like for you to discover and learn about the bot first.**__",
+                        "",
+                        "```Last Updated: 22/05/2021",
+                        "```",
+                        "",
+                        "  - Run the `$$tutorial` command to learn about some of the commands you will be frequently using during your first playthrough, and set your first facilities up. This command is going to introduce you to the game's mechanics and help you get a general sense of how things work.",
+                        "  - Table of Contents:",
+                        "      • Assets",
+                        "      • Facilities & Production",
+                        "      • Trading & Market",
+                        "      • Research & Technology",
+                        "      • Region & Logistics",
+                        "      • Modifiers & Services",
+                        "      • Reincorporation & Miscellaneous",
+                        "",
+                        "__**DISCLAIMER:**__"],
+                        ["  - This message may see changes over time, depending on changes made to IdleCorp. The date of the last update will be shown.",
+                        "  - This guide does not cover all of IdleCorp's features. Extensive guide can be accessed by running $$help or by visiting the Wiki that's run, edited and updated by both the bot developer and IdleCorp players.",
+                        "Link to IdleCorp Wiki: https://wiki.idlecorp.xyz/index.php/Main_Page",
+                        "  - Try to use `$$examine <asset/facility/service/policy>` command to get concise information on a specific matter that you need help about.",
+                        "  - If this text lacks the information you need, feel free to ask a question in #help (You are here!)."]
+                    ]
+                },
+                {
+                    "name": "assets",
+                    "content": [
+                        ["__**ASSETS**__"],
+                        ["  - Assets from facilities are generated within a time frame. Those assets can then be sold to get capital. Certain assets are considered prerequisites, meaning they are required to either build facilities or be consumed to make another asset. The best example to this is the steel mill, which you may build early on, which consumes 4 coal and 1 iron to produce 1 steel.",
+                        "  - A lot of the assets can be purchased with `$$buy`. This command, like many commands, has certain specifiers. This command is commonly used by players who are focusing on producing a certain asset that requires more than 2 prerequisites. It is a key command you will be frequently using early-mid stages. ",
+                        "  - A lot of the assets can also be scrapped with `$$scrap`. This command does not give you an asset that you can sell. You can use scraps to give your factories experience and level them up with `$$addxp <facility> <amount>`.",
+                        "  - Facilities with experience can produce the Plus variant of an asset, given that the produced asset's Plus variant exists. Plus variants cost more than the normal asset. When your factories have more experience, the chances of an asset being a Plus variant increases. Another method to increase the chance is using plus variants of prerequisites or using technology. Consumption of Plus assets are turned OFF by default. You need to use the command `$$scp <facility>` to have them consume said assets. This can be turned off by `$$ucp <facility>`.",
+                        "  - Lands are the only exception to most of these rules. They cannot be sold or transported."]
+                    ]
+                },
+                {
+                    "name": "facilities and production",
+                    "content": [
+                        ["__**FACILITIES & PRODUCTION**__"],
+                        ["  - Almost every facility in game produces assets which you can sell for capital.",
+                        "  - Facility amount depends on how much land you have. You cannot build 2 facilities on a single land.",
+                        "  - Production times can be shortened or extended. These mostly depend on the tech you have in the region and the regional production modifiers.",
+                        "  - Passive Efficiency is determined by the amount of prerequisite assets you're producing to continually supply a factory that needs one. If you are __**producing**__ enough prerequisites, your factory's passive efficiency is going to be at 100% and will not need extra purchases to keep it running. ",
+                        "  - There are LOTS of facilities in the game, don't be afraid to experiment with them! Try out different facilities and play-styles to see what suits you best. See `$$faclist` for a complete list of facilities you can build on IdleCorp."]
+                    ]
+                },
+                {
+                    "name": "trading and market",
+                    "content": [
+                        ["__**TRADING & MARKET**__"],
+                        ["  - Trading with other players is a crucial part of IdleCorp. All sorts of assets can be traded on IdleCorp, ranging from wood to trucks.",
+                        "  - `$$price` command shows you the existing assets, how much they cost, if they're tradable, if they can be scrapped and if they can be sold on retail stores. The scale icon indicates that it's tradable. Shopping bags indicate that the asset can be sold on retail stores and is scrappable.",
+                        "  - Two types of markets exist. One of them is the NPC market, the other is the global player market.",
+                        "  - NPC market has unlimited assets. The only restriction to your purchases from the NPC market is your **hourly buy limit which can be viewed with $$cap**. The hourly buy limit can be increased by building more Logistics Centers.",
+                        "  - Global market access always requires at least one Logistics Center to be built. Global market is where players sell to and buy from other players. However, assets on global market are limited, and asset prices may vary depending on who sells the asset. Hourly buy limit is not affected when you buy assets from the global market."]
+                    ]
+                },
+                {
+                    "name": "research and technology",
+                    "content": [
+                        ["__**RESEARCH & TECHNOLOGY**__"],
+                        ["  - Researching is another crucial part of IdleCorp. Researching yields blueprints, which you need to develop it into a technology with $$dev <blueprint>. You need at least one research facility, 1 million energy and capital to start a research.",
+                        "  - Researching requires energy, an asset that can be generated using solar power plants or coal power plants. Energy can be purchased on global market as well as the NPC market. Coal power plant, as the name suggests, requires a steady supply of coal to continually produce energy. Solar power plants do not need to be supplied.",
+                        "  - You can build a maximum of 8 research facilities in one region. Each research facility in the region grants you one blueprint per research facility, up to a maximum of 8 blueprints. The rarity for the blueprints are random. After 6 research facilities, the research cost also goes up by 500k energy+, which cannot be purchased from NPC market. 8 research facilities need 1 million energy, 1 million energy+ and 1 million capital to start a research.",
+                        "  - A research can take up to 3 hours to finish, but can be completed instantly with 4 gratitude points, which are earned by voting.",
+                        "  - Technologies can be traded. Fun fact, technology used to be the only asset which could be traded. Blueprints cannot be traded on the market, but can be sold to NPC market for 4 million capital.",
+                        "  - Some of the technologies can be combined to create an \"u\"pgraded version. You need three of the same technology to combine them. You can also combine the upgraded versions to create an UU version of the tech.",
+                        "  - Some technologies can be stacked to multiply their effects.",
+                        "  - Up to 6 technology slots can be unlocked by using reincorporation tokens."]
+                    ]
+                },
+                {
+                    "name": "region and logistics",
+                    "content": [
+                        ["__**REGION & LOGISTICS**__"],
+                        ["  - Regions are individual servers with their own unique statistics. They are where your assets are stored, and where your facilities are located.",
+                        "  - Every region is assigned a region code that can be viewed with `$$rc`.",
+                        "  - Assets can be transported between regions with `$$export(all) <region code> <asset> <amount>`. Exporting requires trucks, an asset which can be produced, or be bought from other players. Trucks need gasoline, which can be purchased from NPC market. Exports normally take 30 minutes, this time can be decreased with truck+ by 15 minutes. You can export a maximum of three times from a region. Technologies and blueprints can also be transported. Lands or facilities cannot be exported to another region. Capital is shared across regions.",
+                        "  - Do `$$logistics` to view the amount of trucks and gasoline you have, and your inboxes.",
+                        "  - There are two types of inboxes, one of them is regional and one of them is global. Inboxes are where your trucks, assets and capital come to before you claim them with `$$claim <arrivals/inbox>`.",
+                        "  - Each Logistics Center increases your hourly buy limit by 2 million dollars."]
+                    ]
+                },
+                {
+                    "name": "modifiers and services",
+                    "content": [
+                        ["__**MODIFIERS & SERVICES**__"],
+                        ["  - Regions have production modifiers that change every week. These modifiers affect the time it takes for a facility to produce an asset.",
+                        "  - Happiness is another production modifier that decreases production time if it is increased.",
+                        "  - Services are bonuses which modify various stats of your region. These range from happiness to a bonus on your factories' levels. These require a significant amount of money to unlock. Unlike assets, services are donated money to with `$$ds <service> <capital>`. This means that you get to pay as small as you want, and unlock it over time.",
+                        "  - Policies can be enacted to make significant boosts to your region. These can be viewed with `$$policies`.",
+                        "  - Policies can only be enacted by the Regional Legislator. Enacting policies require Funding Points (FP).",
+                        "  - Regional policies require Region Office service to be unlocked. This allows your players to participate in elections, any player who has the Voter's Boon and 10 million capital can become a candidate for the Regional Legislator spot by typing `$$joinballot`. Players then have to vote for the candidate they see fit with `$$voteballot <mention user>`. Voters also need Voter's Boon to vote for a candidate."]
+                    ]
+                },
+                {
+                    "name": "reincorporation and miscellaneous",
+                    "content": [
+                        ["__**REINCORPORATION & MISCELLANEOUS**__"],
+                        ["  - As with all Idle Tycoon games, restarting your company is a really important part of IdleCorp. It unlocks significant bonuses, reincorporation points, reincorporation tokens and gives you 1,000 Pass XP for each billion of your net worth.",
+                        "  - It is recommended to reincorporate at 10 billion net worth, as no more reincorporation token can be earned afterwards, unless you purchase any of the premium ranks. Reincorporation score is a value that can go up as high as your net worth, so is Pass XP.",
+                        "  - Reincorporation tokens can be used with `$$usetoken <bonus>`. Using the command without specifying a bonus shows you a window displaying the bonuses you can use your tokens on.",
+                        "  - Your free starting land is going to be given to you in the region you reincorporate.",
+                        "  - If you've progressed a bit in a region different than the one you intended to, you can $$liquidate to sell and demolish everything (including land) to move to a different region.",
+                        "  - Before reincorporating or liquidating, make sure to remove installed technology and check player market to see if you can sell your assets to other people.",
+                        "  - Land prices are exponential. The more you buy land, the more its price increases."],
+                        ["",
+                        "",
+                        "This concludes this guide for now! It has been wonderful to closely interact with the members of this community to make this guide. Any feedback on it is highly appreciated!"]
+                    ]
+                },
+                {
+                    "name": "thanks",
+                    "content": [
+                        "Special thanks to:",
+                        "Teemaw for making this possible,",
+                        "Punisher",
+                        "XPARAD0X",
+                        "avalidname",
+                        "BossMan",
+                        "Moykhaile",
+                        "Drathmar for their valuable feedback and perfecting this guide!"
+                    ]
+                }
+            ]
+        }
+    ]
+}

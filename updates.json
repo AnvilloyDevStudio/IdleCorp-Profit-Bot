@@ -1,0 +1,644 @@
+{
+    "Alpha.0.2": {
+        "head": "Update {}:",
+        "commands": {
+            "adds": {
+                "speed": "Calculate facilities speeds(include of consumes and produces)",
+                "history": "Can show up all past version commands(usable) and others(will add in future)"
+            },
+            "changes": {
+                "profit": "From calculate facilities speeds change to calculate facilities money speeds and the Profit of facility"
+            },
+            "deletes": {}
+        },
+        "others": ["Better UI in `speed` and `profit` commands"],
+        "plans to update": {
+            "commands": {
+                "facilities info": "undecided",
+                "help": "Alpha.0.4"
+            },
+            "systems": {
+                "aliases system": "Alpha.0.3",
+                "did you know": "undecided"
+            },
+            "others": {}
+        },
+        "note": ["In `speed` command, \"airport\" argument not work for it, will fix in future version.",
+        "`speed` and `profit` commands can't calculate more than one facilities in one action, plans it'll works in future version.",
+        "All calculate commands in the bot can't get region info, like assets' price and facilities produces' speed, so if you want to calculate it, I can't help you."],
+        "end": "Bot version: **{}**"
+    },
+    "Alpha.0.2.1": {
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {},
+            "changes": {
+                "speed": "Now can put \"airport\" argument in it and will works as normal",
+                "history": "Command symbol from `history <type> <command with version>` become `history <version> <type> <command>`"
+            },
+            "deletes": {}
+        },
+        "other": {
+            "Stats system": "Now will show the task stats (wait a second, isn't it status?) non-inline, anyway, that's will make it looks better."
+        },
+        "plans to update": {
+            "commands": {
+                "facilities info": "undecided",
+                "help": "Alpha.0.4",
+                "updates": "Alpha version",
+                "rules": "undecided",
+                "'Stats' to 'Status'": "next version"
+            },
+            "systems": {
+                "aliases system": "Alpha.0.3",
+                "did you know": "undecided"
+            },
+            "others": {}
+        },
+        "note": ["\"airport\" argument in all calculate command will works as normal, same, `speed` and `profit` commands can't calculate more than one facilities in one action, plans it'll works in future version."],
+        "end": "Bot version: **{}**"
+    },
+    "Alpha.0.3.0": {
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {},
+            "changes": {
+                "Developer": "`Up-12D2111`"
+            },
+            "deletes": {}
+        },
+        "other": ["Changed \"Stats\" to \"Status\" (It will has \"Stats system\" in future)",
+            "\"Aliases system\", help command will show about that in future version but without facilities'"],
+        "plans to update": {
+            "commands": {
+                "facilities info": "undecided",
+                "help": "Alpha.0.4",
+                "updates": "Alpha version",
+                "rules": "undecided",
+                "codes": "undecided"
+            },
+            "systems": {
+                "did you know": "undecided",
+                "aliases system\" \"facilities part": "undecided"
+            },
+            "others": {}
+        },
+        "note": ["\"Aliases system\" facilities part will update in future"],
+        "end": "Bot version: **{}**"
+    },
+    "Beta.0.1.0": {
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "rules": "Can show the server rules, also can show the older version",
+                "updates": "Can show the bot updates, also can show the older version",
+                "codes": "Base part, will show the information by codes",
+                "help": "Base part, will show the description and the syntax of commands"
+            },
+            "changes": {
+                "speed": "All strings will start with a upper letter",
+                "profit": "All strings will start with a upper letter"
+            },
+            "deletes": {}
+        },
+        "other": ["Hope embed colors are good"],
+        "plans to update": {
+            "commands": {
+                "facilities info": "undecided",
+                "help complete": "undecided",
+                "codes complete": "undecided"
+            },
+            "systems": {
+                "did you know": "undecided",
+                "aliases system\" \"facilities part": "undecided"
+            },
+            "others": {}
+        },
+        "note": ["Now the base part of `codes` and `help`can use but not some haven't add in, they will completed in future version"],
+        "end": "Bot version: **{}**"
+    },
+    "Beta.0.2.0": {
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "search": "Can show the server rules, also can show the older version"
+            },
+            "changes": {
+                "history": "Added Beta.0.1.0 -- `ping` and `version`",
+                "ping": "Something",
+                "version": "Something"
+            },
+            "deletes": {}
+        },
+        "other": [],
+        "plans to update": {
+            "commands": {
+                "facilities info": "undecided",
+                "help complete": "undecided",
+                "codes complete": "undecided"
+            },
+            "systems": {
+                "did you know": "undecided",
+                "aliases system\" \"facilities part": "undecided"
+            },
+            "others": {}
+        },
+        "note": ["Hope you all happy"],
+        "end": "Bot version: **{}**"
+    },
+    "Beta.0.3.0":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "info": "Can show the info of the asset or the facility"
+            },
+            "changes": {
+                "profit": "The facility can input as upper case, and the facility error message had changed, makes numbers can show with a \",\" separator, the number can type in with \",\" separator and end with \"k\", \"m\" or \"b\"",
+                "speed": "As same as above",
+                "history": "Added Beta.0.2.0 -- `profit`, `speed` and `search`, fixed some are not work normally",
+                "search": "Now the embed(not exist) canshow normally"
+            },
+            "deletes": {}
+        },
+        "other": ["\"Aliases system\" -- The complete Aliases system had done, will add the aliases in help command",
+            "Added Beta.0.2.0 bot update into `updates` command"],
+        "plans to update": {
+            "commands": {
+                "help complete": "next version",
+                "codes complete": "next version"
+            },
+            "systems": {
+                "did you know": "undecided"
+            },
+            "others": {}
+        },
+        "note": ["The April Fools Day update is just one day, and it passed, so I think I can add that in history?",
+            "Will add \"technologies\", \"blueprints\" and \"services\" in `info` in future",
+            "It shouldn't called \"facilities part\", should be \"IdleCorp part\" but never mind"],
+        "end": "Bot version: **{}**"
+    },
+    "Beta.0.4.0":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {},
+            "changes": {
+                "codes": "Completed and added new codes include of Error Codes",
+                "history": "Added `server_icon` into it, can show up the old server icon, added Beta.0.3.0 -- `help`, `info`, `profit`, `rules`, `search`, `speed`",
+                "search": "Can support in future version, old one added in `history`"
+            },
+            "deletes": {}
+        },
+        "fixed": ["`updates` -- 1. Fixed when send a invalid string in command, won't send in each messages",
+            "2. Fixed embed won't show when the update too long",
+            "`history` -- Some message not shown the correct one, won't add into `history`"],
+        "other": ["All commands will suit Error Codes, then the version haven't added Error Codes will add into `history`",
+            "New Codes version 1.0 -- `UA37101`",
+            "Developer -- `UD08101`"],
+        "plans to update": {
+            "commands": {
+                "`profit` and `speed` units": "undecided",
+                "botinfo": "next version"
+            },
+            "systems": {
+                "did you know": "undecided"
+            },
+            "others": {}
+        },
+        "note": ["Some method error cannot add into `history`, if any error miss add error code, please report",
+            "Any bugs please report in <#828810972902457415> or DM/PM <@484883489846591491> or <@683694351855255590>",
+            "Will add \"technologies\", \"blueprints\" and \"services\" into `info` in next version"],
+        "end": "Bot version: **{}**"
+    },
+    "Beta.0.5.0":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "botinfo": "Can show the information of the bot"
+            },
+            "changes": {
+                "info": "Add facilities consumes, produces and speed info to facilities, added assets prices, and added \"technologies\", \"blueprints\" and \"services\"",
+                "profit": "In consumes part, the price from the npc sell prices changed to the npc buy prices, and the profit part changed by that change. The Note had changed.",
+                "search": "Can support in future version, and changed when not key words entered",
+                "help": "Added `botinfo`, changed `search` syntax, from `search <thing>` changed into `search [--<April|april|20210401|aprilfool>] [thing]`, and won't write into `history`"
+            },
+            "deletes": {}
+        },
+        "fixed": ["`info` -- 1. Facilities Construct part, assets number now will show with "," separator",
+            "2. In facilities part, if the wikipedia part is \"None\", now won't show the invalid Wikipedia link",
+            "3. Fixed a typo make the info not find, \"presciption drug\" in data, fixed to \"prescription drug\", and won't write into `history`",
+            "`help` -- 1. Fixed when the command argument just can work with aliases",
+            "2. Fixed the aliases when show the details is a wrong aliases",
+            "3. Fixed a typo of without argument, in `updates` syntax, \"splilt\" fixed to \"split\", and won't write into `history`",
+            "4. Fixed a typo of aliases -- assets, a aliases list name, \"lamd\" fixed to \"land\", and won't write into `history`",
+            "`codes` -- Fixed a mistake of extra \"> \" in Beta.0.4.0 -- Fixed"],
+        "other": ["New Codes version 1.1 -- `UA37102`"],
+        "plans to update": {
+            "commands": {
+                "`profit` and `speed` units": "next version",
+                "info images": "next version"
+            },
+            "systems": {
+                "did you know": "next version"
+            },
+            "others": {}
+        },
+        "note": ["Any bugs or typos please report in #bug-report or DM/PM the developer or the owner",
+            "There had some typo since all the names and aliases are manual enter"],
+        "end": "Bot version: **{}**"
+    },
+    "Beta.0.6.0":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "profitcomplete": "Added more \"First Fac\", \"Per land\", \"Produces Remains(by-produce in profit.txt)\" than `profit`"
+            },
+            "changes": {
+                "profit": "Can add unit flag and will show the unit",
+                "speed": "Same as `profit` update",
+                "history": "Added Beta.0.5.0 -- `profit`, `info`, `speed`, added `history` -- `server`, `idlecorpprofit`, suggest for more",
+                "rules": "Added rules version v.1.1.0",
+                "info": "Added images on the top-right",
+                "help": "Changed the description of `ping`, from \"Can show the latency of the bot\", changed into \"Can show the gateway latency of the bot\", and won't write into `history`, added `profitcomplete` and changed the syntax of `profit`, from `profit <facility> [number]`changed into `profit [--<s|second|minute|min|m|hour|hr|h|day|d>] <facility> [number]`, and won't write into `history`"
+            },
+            "deletes": {}
+        },
+        "fixed": ["`info` -- 1. Fixed the unsupported code",
+            "2. Fixed a typo of alias -- facilities -- plastic factory, a alias, \"plastci fac\" fixed to \"plastic fac\", and won't write into `history`",
+            "3. Fixed Production show with underscores",
+            "Now won't send two message simular at once",
+            "`history` -- 1. Fixed a typo of the description of `history` -- `server_icon` -- `1`, from \"You can see what's the different of that.\", fixed into \"You can see what's the difference of them.\"",
+            "2. Updated the `history` commands list"],
+        "other": ["\"Did you know\" -- Added on `profit`, `speed`, `profitcomplete`"],
+        "plans to update": {
+            "commands": {
+                "profit embed and text file export": "v.1.0"
+            },
+            "systems": {
+                "complete tasks-stats": "v.1.0",
+                "suggestions status": "v.1.0"
+            },
+            "others": {}
+        },
+        "note": ["Miss notify the update in Beta.0.5.0: Commands -- Changes -- `history` -- Added Beta.0.4.0 -- `info`, `help`, `profit`, `search`, `updates`",
+            "This update version will be the last Beta version/big Beta version update if no mistakes"],
+        "end": "Bot version: **{}**"
+    },
+    "Beta.0.6.1":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {},
+            "changes": {
+                "history": "Added Beta.0.6.0 -- `updates`, `profit`, `speed`, `profitcomplete`",
+                "help": "Changed the syntax of `speed`, from `speed <facility> [number]` changed into `speed [--<s|second|minute|min|m|hour|hr|h|day|d>] <facility> [number]`, and won't write into `history`",
+                "updates": "Added alias \"changelog\" as the one of the aliases, and won't write into `history`"
+            },
+            "deletes": {}
+        },
+        "fixed": ["`updates` -- Fixed when use full names as parameters will appear an error called \"Command has error, local variable 'f' referenced before assignment\"",
+            "`help` -- Fixed `profitcomplete` in `help` not work normally"],
+        "other": ["\"Did you know\" -- Change the appear time from 1.2 seconds changed to 3 seconds"],
+        "plans to update": {
+            "commands": {
+                "profit embed and text file export": "v.1.0"
+            },
+            "systems": {
+                "complete tasks-stats": "v.1.0",
+                "suggestions status": "v.1.0"
+            },
+            "others": {}
+        },
+        "note": ["The bot version now normally, not \"Beta.0.5.0\"",
+            "Hope more people use this bot"],
+        "end": "Bot version: **{}**"
+    },
+    "1.0":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "profitfileexport": "Calculate and generate the profit.txt or a zip file or a embed in DM, send the Beta version of Profit",
+                "calculate": "Do some quick calculations",
+                "ncguide": "The newcomer guide combined into the command"
+            },
+            "changes": {
+                "history": "Added Beta.0.6.1 -- `search`, `profitcomplete`, `updates`"
+            },
+            "deletes": {}
+        },
+        "fixed": ["Fixed a bug that will send twice instead of once",
+            "`search` -- Fixed some features not work normally",
+            "`profitcomplete` -- 1. Fixed when the facility input is \"airport\" raises some problem, just fixed a few",
+            "2. Fixed an error \"both arguments should be Rational instances\" when the parameter contains number",
+            "3. Fixed a visual bug on profit per land didn't shown \"/land\" when the parameter of the facility is \"airport\"",
+            "`updates` -- Fixed a visual bug some capitalization mistakes, details -- `UN12101`"],
+        "other": ["`updates` -- Fixed a visual bug some capitalization mistakes, details -- `UN12101`",
+            "New Codes version 1.2 -- `UA37103`",
+            "Task-status can shown in #tasks-status and it's name became \"tasks-status\", details Developer -- `UD02201`, `UN22201`",
+            "\"Did you know\" -- Added more, details Developer -- `UD29201`"],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["Since the program language not support the RAR file creations, then the compression file type is ZIP instead of RAR, but Beta version still be RAR",
+            "Don't expect v.1.1 release fast",
+            "I don't know what other commands can put \"Did you know\" embed",
+            "Some aliases and `help` improvements will be done in 1.1",
+            "\"Airport\" really hard to process"],
+        "end": "Bot version: **{}**"
+    },
+    "1.0.1":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {},
+            "changes": {
+                "history": "Added 1.0 -- `info`, `help`"
+            },
+            "deletes": {}
+        },
+        "fixed": ["Fixed a bug that the Developer and the Owner cannot use administrator commands, and won't write into `history`,  details Developer -- `UD02102`",
+            "`info` -- 1. Fixed a typo of the name of \"fiber infrastructure\", from \"fiber infrestructure\" fixed into \"fiber infrastructure\", and won't write into `history`",
+            "2. Fixed a bug when the facilities not are factories or mines, it didn't work normally",
+            "`help` -- Fixed a bug when the commands have necessary parameters, the command cannot be found"],
+        "other": ["New Codes version 1.2.1 -- `UA37104`"],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["\"Airport\" really hard to process in commands..."],
+        "end": "Bot version: **{}**"
+    },
+    "1.0.2":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {},
+            "changes": {
+                "suggest": "In `info`, added \"UTC\" mark in the time, \"Created at\"",
+                "history": "Added 1.0.1 -- `suggest`, `speed`, `profit`, `profitcomplete`, `updates`",
+                "speed": "In \"Note\", it had changed",
+                "profit": "In \"Note\", it had changed",
+                "profitcomplete": "In \"Note\", it had changed"
+            },
+            "deletes": {}
+        },
+        "fixed": ["`profitcomplete` -- Fixed a bug when the parameters contain correct flags, it cannot work normally",
+            "`updates` -- Fixed a bug when the parameters contain correct version flags, it cannot work normally"],
+        "other": ["New Codes version 1.2.2 -- `UA37105`",
+            "\"Did you know\" -- Added more, details Developer -- `UD29202`"],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["Thanks XPARAD0X helped improve the \"Note\" in these commands",
+            "3 updates in 1 day..."],
+        "end": "Bot version: **{}**"
+    },
+    "1.0.3":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {},
+            "changes": {
+                "history": "Added 1.0.2 -- `updates`"
+            },
+            "deletes": {}
+        },
+        "fixed": ["`updates` -- Fixed a bug when the updates contain no \"Commands\" -- \"Adds\", the whole \"Commands\" disappear"],
+        "other": [],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["More improvement will be done in v.1.1.0",
+            "Hope there are fewer bugs"],
+        "end": "Bot version: **{}**"
+    },
+    "1.1.0":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "guide": "There are two, basic and advanced"
+            },
+            "changes": {
+                "calculate": "Added \"=+\", \"=\\*\", \"=o\" for the command aliases of \"= +\", \"= \\*\", \"= o\"",
+                "help": "Removed \"Detail\" part when detailed",
+                "info": "Now the \"level boosts\" will be appear when the parameter is technology",
+                "search": "The command has rewritten, now it can used to search IdleCorp Wiki",
+                "profit": "Added regional modifiers option",
+                "speed": "Added regional modifiers option",
+                "profitcomplete": "Added regional modifiers option"
+            },
+            "deletes": {
+                "[Developer]": "`UD03201`",
+                "history": "Removed previous versions but still on python version and will be add back in next version, temporarily removed"
+            }
+        },
+        "fixed": ["`codes` -- Some error outputs have fixed",
+            "`info` -- Fixed a visual bug when the technology has the \"u\" or \"uu\" upgrade, it show without a space, like \"oil mappingu\""],
+        "other": ["The python version no longer be supported, and it separated into <@!857983996096806962>",
+            "The command alias system has improved, details Developer -- `UD48201`",
+            "Developer -- Removals `UD28201`",
+            "New Codes version 1.3.0 -- `UA37106`",
+            "Codes `EN0401` and `EN0402` are no longer in use, they are being discarded and still can be checked",
+            "The messages be sent when member joined and left, they have changed",
+            "Changed some words in errors and information, \"argument\" to \"parameter\"",
+            "Now commands no longer check if the input has more than the number of the flags maximum accept",
+            "More potential updates"],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["The codes has rewritten and it will be improved, the speed will faster when running",
+            "`profitfileexport` -- Beta versions don't have embed version",
+            "The regional modifiers option just for the HQ and IdleCorp Profit servers, and use more times to process",
+            "Now many commands accepts upper cases for the parameters",
+            "Now don't accepts the numbers which with separators for all commands",
+            "You are welcome to expand the guides"],
+        "end": "Bot version: **{}**"
+    },
+    "1.1.1":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "production": "Calculates the least time is needed to produce specific amount",
+                "history": "The new history command is now available, you can access the commands for every previous bot versions"
+            },
+            "changes": {
+                "help": "Added more detailed information for each command and more information on optional flag `--info`",
+                "guide": "Added more guides, if you want to see more guides, please look `ncguide`, the newcomer guide also includes some guide that are basics, added a flag `--aliases` for checking the aliases of guide",
+                "search": "Now support redirects, categories and sections",
+                "calculate": "The command syntax has changed",
+                "codes": "The command option `--old` has changed",
+                "profitcomplete": "The 2 ratios in the brackets became 3"
+            },
+            "deletes": {}
+        },
+        "fixed": ["`profit` -- Fixed when the regional modifier options is valid, Produce and Profit part didn't applied",
+            "`profitcomplete` -- 1. Fixed the produce remain per land cannot show normally",
+            "2. Same as above",
+            "Fixed some commands cannot work with airport",
+            "`calculate` -- Fixed error don't appear when there is no parameter is entered",
+            "`guide` -- Fixed the Advanced guide list didn't shown in the guide list"],
+        "other": ["The regional modifier options now include the happiness",
+            "Added newer version information to all of the commands that are IdleCorp calculations, and `info`, added options `--version` to IdleCorp calculation commands",
+            "Added some missing errors inside some commands",
+            "Simplified the syntax of `calculate` in `help`",
+            "New Guide version 1.1.0",
+            "New Codes version 1.4.0 -- `UA37107`",
+            "Codes `EN0401`, `EN0402`, `EN1001`, `EN1002` have removed, other Error codes have rewritten, including error messages",
+            "The IdleCorp Calculation commands now use integral production time for the calculation"],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["If there is any information that is outdated, please let the Developer know",
+            "All commands should work normally"],
+        "end": "Bot version: **{}**"
+    },
+    "1.2.0":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "idea": "The idea system, which is similar to Trello, also the status showing"
+            },
+            "changes": {
+                "help": "Information section, added \"profitcomplete\""
+            },
+            "deletes": {}
+        },
+        "fixed": ["`info` -- Fixed the parameter cannot accept the input other than aliases now",
+            "`help` -- 1. Fixed the information cannot be seen while the parameter is not alias",
+            "2. The information about `suggest` has been fixed",
+            "`profitcomplete` -- Fixed the time unit cannot affect the calculation"],
+        "other": ["New Guide version 1.1.1",
+            "Idea status can be seen in <#912241878508912640>",
+            "Potential minor updates and fixes"],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["If there is any information that is outdated or any function that cannot work as expected, please let the Developer know",
+            "The customization setting system will not be added and available until the host of the bot is changed"],
+        "end": "Bot version: **{}**"
+    },
+    "1.2.1":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "remind": "A reminder command, it will remind you via the DM channel.",
+                "wiki": "It can show the wiki links from IdleCorp Wiki."
+            },
+            "changes": {
+                "info": "Added new images for the new updates, In the information section, added \"search\".",
+                "botinfo": "The embed has been updated."
+            },
+            "deletes": {}
+        },
+        "fixed": ["Potentially fixed."],
+        "other": ["Idea status can be seen in #idea-status.",
+            "Potential minor updates and fixes."],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["If there is any information that is outdated or any function that cannot work as expected, please let the Developer know.",
+            "The customization setting system will not be added and available until the host of the bot is changed."],
+        "end": "Bot version: **{}**"
+    },
+    "1.2.2":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "minigame": "A minigame, version 1.0.0."
+            },
+            "changes": {
+                "info": "Added \"--theme\".",
+                "help": "More information has been added.",
+                "ncguide": "Updated structure version to v.1.1, added point specification.",
+                "rules": "The embed title \"Server Rules\" has been renamed as \"Server Rules and Regards\".",
+                "calculate": "Added \"--formula\", which able the calculations with the formulas, the list of the formulas can be seen by `help calculate`."
+            },
+            "deletes": {}
+        },
+        "fixed": ["`updates` -- Fixed the embed color.",
+            "`info` -- Fixed the embed color.",
+            "`help` -- Fixed the syntax of `calculate`.",
+            "Potentially fixed."],
+        "other": ["The rules data has been updated.",
+            "New Codes version 1.4.1 -- `UA37108`.",
+            "New Minigame system, it takes longer time to execute commands.",
+            "Potential minor updates and fixes."],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["If there is any information that is outdated or any function that cannot work as expected, please let the Developer know.",
+            "The customization setting system will not be added and available until the host of the bot is changed."],
+        "end": "Bot version: **{}**"
+    },
+    "1.2.3":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "production": "Added \"--production\" for the main purpose.",
+                "help": "Shortened the embed on `help <command>` when \"--details\" is not inputted."
+            },
+            "changes": {},
+            "deletes": {
+                "task": "All subcommands and contents have been deleted.",
+                "idea": "All subcommands and contents have been deleted.",
+                "history": "All folders, files and the command have been deleted."
+            }
+        },
+        "fixed": ["`profitcomplete` -- Fixed the land number was not affected by the number of input facility.",
+            "Potentially fixed."],
+        "other": ["`production` -- Asset and Facility parameters are available. Technology, Service and Policy parameters will be available in the next update.",
+            "\"Task status\" and \"Idea status\" have been deleted.",
+            "Potential minor updates and fixes."],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["If there is any information that is outdated or any function that cannot work as expected, please let the Developer know.",
+            "The customization setting system will not be added and available until the host of the bot is changed."],
+        "end": "Bot version: **{}**"
+    },
+    "1.2.4":{
+        "head": "Update *{}*:",
+        "commands": {
+            "adds": {
+                "termsofservice": "A link."
+            },
+            "changes": {
+                "calculate": "Added \"calc\" for the alias.",
+                "help": "Added \"minigame\" and \"production\" into \"info\".",
+                "production": "Technology, Policy and Service parameters are available, but the calculations for Asset+ and Airport productions are not."
+            },
+            "deletes": {}
+        },
+        "fixed": ["`suggest status` -- Fixed the embed title from \"Ideas Status\" into \"Suggestion status\".",
+            "Fixed IdleCorp asset information name from \"tourism compaign\" into \"tourism campaign\".",
+            "Fixed IdleCorp asset name from \"unversity\" into \"university\".",
+            "`info` -- Fixed the information of policies were missing.",
+            "Potentially fixed."],
+        "other": ["Add \"+help\" into the status",
+            "New Codes version 1.4.2 -- `UA37109`.",
+            "`info` -- Add more themes -- `UN11101`.",
+            "Potential minor updates and fixes."],
+        "plans to update": {
+            "commands": {},
+            "systems": {},
+            "others": {}
+        },
+        "note": ["If there is any information that is outdated or any function that cannot work as expected, please let the Developer know.",
+            "The customization setting system will not be added and available until the host of the bot is changed."],
+        "end": "Bot version: **{}**"
+    }
+}

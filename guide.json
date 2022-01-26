@@ -1,0 +1,194 @@
+{
+    "basic": {
+        "logistics": {
+            "hourly asset buy limit": "It is 1 million for the base, you can get more 10% by voting. Get more 2 million for each logistics center, more 4 million for each logistics expansion installed.",
+            "export": "You can use truck+ for faster speed, 15 minutes, it's 30 minutes for truck, default with truck.",
+            "inbox": "The Global inbox just for capital it may used `$$give` or `$$msell` with capity to be given, otherwise, Regional index. The resourses will arrived to the region inbox the region you did the player market buy and sell."
+        },
+        "land" : {
+            "limitation": "They cannot be sold and transported until you are liquidating or reincorporating, they are the only way to sell land.",
+            "collect": "You can buy lands from using `$$buy land`, the prices of land are exponential. You also can get them by using tokens."
+        },
+        "retail": {
+            "customer support center": "1 customer support center can affort 10 retail stores, also can get the most efficiency in them.",
+            "good thing": "It is more efficiency to use retail store instead of selling them to the NPC market."
+        },
+        "region": {
+            "regional modifiers": "Regional modifiers affect the production times (reset every week), asset prices (reset every hour), also the retail. They are different in each region (servers).",
+            "individual": "All regions are unique, have different modifiers, prices and corporations.",
+            "service": "Most of the region services can increase the happiness of the region, you can donate money for them.",
+            "happiness": "The region happiness affect the production time, and the retail ranking."
+        },
+        "facility": {
+            "production time": "All facilities need time to do production, not in a static speed. They only consume and produce assets or money when the time has ended, you can see the time left and the production time by doing `$$facility`.",
+            "passive": "The passive efficiency means that you are getting the needed resources for all the factories. 100% passive efficiency means you will never stop running, 0% passive efficiency means you are not getting any resources for the factory passively, if its in between, you are not getting enough resources for 100%. When you are not enough for 100% passive efficiency, the value of the assets which are the input of facility will decrease. You will need to make sure the passive efficiency is 100% or always make sure the assets is enough to do the productions. And levels will affect the passive efficiency too. When facilities is level 1, it is 0.5% asset+ chance, if level 50, 25% asset+ chance, another 75% is normal asset, also if not facility+, it will need more facilities to keep it passive.",
+            "efficiency": "Low passive production of materials that the factory needs makes it have extreme low efficiency.",
+            "profit per hour": "Your net profit per hour is an estimate of if you sold everything you make in the hour. For example, you make plastic but not selling it. When you haven’t get the money from it, that’s mean assets, you will need to sell assets to get the money.",
+            "research": "The maximum amount of research facility you can build is 8, and start from 7th research facility, research consumes energy+. They produce the number of blueprints as same as the amount of research facilities."
+        },
+        "research": {
+            "efficiency": "Blueprints can be sold in NPC market for 4 million each, they cannot be sold in the player market until they are developed, you can sell them for higher price, like 50 million.",
+            "maximum": "The slots can be 6 for the maximum by using tokens.",
+            "stackable": "Some technologies don't take multiple effect when they are stacked, you will needed to check if they are worth to stack the technologies to take higher, even multiple effect."
+        },
+        "asset": {
+            "price": "The prices of the assets which can be checked by using `$$examine`, are unstable, meaning they are affected by the regional modifiers, you can sell them when they are expensive.",
+            "scrap": "Scrap is mostly gained through `$$scrap` (end product). Most end products yield different amounts. You can also scrap developed tech, if you wanted to do such things."
+        },
+        "reincorporation": {
+            "use": "Reincorporation will reset all you stuff without some permanent additions, and reincorporate in the server you used the command with at least 10 lands and some money, like the stuff is just started to play",
+            "suggest": "Always rebirth when you have at least 10b net worth on your corporation to get better return.",
+            "before reincorporation": "Make sure you sold all your installed technologies if you have any before reincorporation.",
+            "someone's advice": "Playing on multiple servers is expensive for newer players... trucks and gas needed for exporting. My advice is to play on one server with fully funded regional bonuses. So growing is faster and it eliminates the need/costs for exporting."
+        },
+        "market": {
+            "access requirement": "Market access always requires a logistics center to be built.",
+            "use": "You can buy the assets from, and sell to them with the market. It is realtime.",
+            "types": "There are two types of markets, one is the NPC which is limited to your hourly asset buy limit, and the player market where the resources/assets may be finite but the buying limit is not reduced when you buy them from other players.",
+            "check market": "If you want to buy an asset, check sell offers, if you want to sell an asset, check buy offers.",
+            "when offering": "When you place buy offers > lowest sell offers. You'll get your resources immediately. But if you place buy offer < lowest sell offers, you need to wait until someone fill your offers by creating sell offers with <= your buy offers.",
+            "market view": "In home page, it have asset and broken line chart, \"bids\" mean buy offers, \"asks\" mean sell offers. Then click into it or click on bottom assets list, will go to a page, same meaning and can see the price of the market offers."
+        },
+        "technology": {
+            "use": "Each technology has its effect to affect the facilities and the reincorporation, also the galatic expedition.",
+            "stackability": "To determine a technology is stackable or not, depends on the effect of the technology it does. If the technology is affect the affected with fixed and specific number instead of increase or reduce with a number, it is not stackable."
+        },
+        "corporation": {
+            "liquidation": "Liquidation will demolish all the facilities, sell all lands the assets to the npc market in the server you used the command `$$liquidate`. If you had bought lands in the server, you can begin on that server, if not, buy lands in the new server.",
+            "voters boon": "Voters Boon is a boost in production gained from doing $$vote. The only loss here is if you don't $$vote you lose out on gratitude points which helps speed up research production. (If you're into that). Also the vote reward of $1k is tripled to $3k"
+        },
+        "galactic expedition": {
+            "use": "Galactic Expedition can give you raw materials and relics.",
+            "setup": "You need to build a space station and rocket launch pad to start any galactic expedition. In order to build them, you need mainly a lot of scraps, rocket fuel, space station parts, aluminum, money, energy and logistics specialization technologies each 1 and other materials.",
+            "before starting expedition": "When you done these setup, you need galactic coordinates to start your galactic expedition. To get them, you need to do researches, also rockets.",
+            "start expedition": "You need to use `$$galaticexpedition` with deficulty, they have rarity with their dificulty.",
+            "reward": "Rewards include raw materials to exclusive relics.",
+            "space station": "Space station needs rocket launch pad to unlocks the ability to be built. Space station unlocks galactic expeditions and quantum vault.",
+            "orbit": "Use $$orbit to moniter your global orbital presence.",
+            "relics": "Relics have some global effect on your corporation when placed in your quantum vault.",
+            "quantum vault": "Items in your vault have a 50% chance of being kept through reincorporation.",
+            "quantum stabilization": "If `quantum stabilization` is installed in the region you reincorporate in, assets in your quantum vault have a `75%` chance of being kept instead.",
+            "userelic": "`$$userelic` is used to use `relic of knowlege`."
+        }
+    },
+    "advanced": {
+        "facility": {
+            "efficiency": "You can make more high efficiency facilites to faster to the end-game facilities.",
+            "levels": "The facility levels affect the asset+ produce chances, which more expensive than the normal one.",
+            "asset+ chances": "Each level of the facility takes more 0.5% of producing asset+.",
+            "suggest": "Do not make the levels of non-endgame facilities raise too fast, unless you use facility+ for the facilities.",
+            "setconsumeplus": "It has a greater value than its non+ counterpart, if sold to the NPC market. Or you can tell your factories to only use materials+ for a higher chance of making a plus laptop for example."
+        },
+        "asset": {
+            "asset+": "The asset+ can be sold more expensive in NPC market, which means you can make more money for them."
+        },
+        "market": {
+            "use": "Some people use rare asset to exchange given capital. So you trade with normal price and then use rare asset to returns the rest of the change."
+        }
+    },
+    "aliases": {
+        "basic": {
+            "logistics": {
+                "_index": ["log"],
+                "hourly asset buy limit": ["buy limit", "hourly", "limit"],
+                "export": ["exp", "transfer"],
+                "inbox": ["inboxes"]
+            },
+            "land": {
+                "_index": ["ld"],
+                "limitation": ["limit"],
+                "collect": ["obtain", "get"]
+            },
+            "retail": {
+                "_index": ["rt"],
+                "customer support center": ["csc", "support center"],
+                "good thing": ["good", "advantage"]
+            },
+            "region": {
+                "_index": [],
+                "regional modifiers": ["region mod", "modifier", "mod", "modifiers", "regmod"],
+                "individual": ["unique", "indiv"],
+                "service": ["services"],
+                "happiness": ["happy"]
+            },
+            "facility": {
+                "_index": ["facilities", "fac"],
+                "production time": ["time", "production"],
+                "passive": ["pass"],
+                "efficiency": ["effic", "eff"],
+                "profit per hour": ["net profit per hour", "net profit/hr", "net profit/h", "net profit/hour", "profit per hour", "profit/hr", "profit/hour", "pf/h", "pf/hr", "pf/hour"],
+                "research": ["res"]
+            },
+            "research": {
+                "_index": ["res", "researches"],
+                "efficiency": ["effic", "eff"],
+                "maximum": ["max"],
+                "stackable": ["stack"]
+            },
+            "asset": {
+                "_index": ["assets"],
+                "price": ["prices"],
+                "scrap": ["scraps"]
+            },
+            "reincorporation": {
+                "_index": ["reincorp", "ric", "reinc", "rein", "rebirth", "rebirthing"],
+                "use": [],
+                "before reincorporation": ["before reincorp", "before rein", "before reinc", "before ric", "before rebirth", "before rebirthing"],
+                "suggest": ["sug", "sgt", "sg"],
+                "someone's advice": ["advice", "someone advice"]
+            },
+            "market": {
+                "_index": ["mrkt"],
+                "access requirement": ["access", "access requires", "access require", "require", "requirement"],
+                "use": [],
+                "types": ["type"],
+                "check market": ["checking", "check", "market"],
+                "when offering": ["offering", "offer", "when offer"],
+                "market view": ["IdleCorp market", "view", "IdleCorp market view"]
+            },
+            "technology": {
+                "_index": ["tech"],
+                "use": [],
+                "stackability": ["stackable", "stack"]
+            },
+            "corporation": {
+                "_index": ["corp", "corpor"],
+                "liquidation": ["liquidate"],
+                "voters boon": ["vote", "voter boon", "vote boon", "vote reward", "vote rewards"]
+            },
+            "galactic expedition": {
+                "_index": ["gex"],
+                "use": [],
+                "setup": ["before"],
+                "before starting expedition": ["before start expedition", "before expedition", "before exp", "before epdt", "before epd"],
+                "start expedition": ["start", "starting expedition", "start exp", "start epd", "start epdt"],
+                "reward": ["end", "after"],
+                "space station": ["ss", "station"],
+                "orbit": ["ob"],
+                "relics": ["relic", "rl", "rlc"],
+                "quantum vault": ["vault", "qvault"],
+                "quantum stabilization": ["quantum stab", "qstab", "technology", "tech"],
+                "userelic": ["use relic", "use relics", "use rlc", "use rl", "ur"]
+            }
+        },
+        "advanced": {
+            "facility": {
+                "_index": ["fac", "facilities"],
+                "efficiency": ["eff", "effic"],
+                "levels": ["lv", "level"],
+                "asset+ chances": ["asset+", "chances", "chance"],
+                "suggest": ["sug", "sgt", "sg"],
+                "setconsumeplus": ["scp", "consumeplus", "sonsume+"]
+            },
+            "asset": {
+                "_index": ["assets"],
+                "asset+": ["assets+"]
+            },
+            "market": {
+                "_index": ["mrkt"],
+                "use": []
+            }
+        }
+    },
+    "version": "1.1.1"
+}

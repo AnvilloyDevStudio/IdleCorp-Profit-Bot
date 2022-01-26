@@ -1,0 +1,18 @@
+{
+    "first": {
+        "commands": ["cmds", "c"],
+        "other": ["o"],
+        "plans to update": ["ptu", "p"],
+        "note": ["n"]
+    },
+    "second": {
+        "adds": ["ad", "a"],
+        "changes": ["cg", "c"],
+        "deletes": ["dl", "d"]
+    },
+    "third": {
+        "commands": ["cmds", "c"],
+        "systems": ["st", "s"],
+        "others": ["o"]
+    }
+}

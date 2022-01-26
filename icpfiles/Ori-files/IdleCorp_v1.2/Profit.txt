@@ -1,0 +1,732 @@
+money IO (pre second)
+tree farm
+$100.00
+Produces
+$0.06/fac
+Profit
+$0.06/fac
+$0.06/land
+Every 00:05
+
+oil well
+$300.00
+Produces
+$0.1/fac
+Profit
+$0.1/fac
+$0.1/land
+Every 00:10
+
+coal mine
+$400.00
+Produces
+$0.16/fac
+Profit
+$0.16/fac
+$0.16/land
+Every 00:10
+
+iron mine
+$550.00
+Produces
+$0.1/fac
+Profit
+$0.1/fac
+$0.1/land
+Every 00:20
+
+oil refinery
+$1,050.00
+Consumes
+$0.0166/fac
+Produces
+$0.1666/fac
+Profit
+$0.15/fac
+1:6
+First Fac
+oil well*1
+land 2
+$0.075/land
+--
+oil-0.8333
+--
+$0.0833
+--
+Every 00:30
+
+steel mill
+$1,200.00
+Consumes
+$0.057/fac
+$0.0228/fac
+Produces
+$0.2285/fac
+Profit
+$0.148/fac
+4:7((4:7, 1:1.75), (1:7))
+First Fac
+iron mine*1
+coal mine*1
+land 3
+$0.0495/land
+--
+iron-0.0214
+coal-0.6857
+--
+$0.0428
+$0.137
+--
+Every 00:35
+
+bauxite mine
+$1,300.00
+Produces
+$0.16/fac
+Profit
+$0.16/fac
+$0.16/land
+Every 00:25
+
+rubber factory
+$1,500.00
+Consumes
+$0.02/fac
+Produces
+$0.175/fac
+Profit
+$0.155/fac
+31:200(1:6.4516)
+First Fac
+oil well*1
+land 2
+$0.0775/land
+--
+oil-0.8
+--
+$0.08
+--
+Every 00:40
+
+gas station
+$1,800.00
+Consumes
+$0.666/fac
+Produces
+$1/fac
+Profit
+$0.333/fac
+1:1
+First Fac
+oil well*1
+oil refinery*4
+land 6
+$0.0555/land
+--
+oil-0.333
+--
+$0.0333
+--
+Every 00:15
+
+furniture factory
+$2,000.00
+Consumes
+$0.00625/fac
+Produces
+$0.25/fac
+Profit
+$0.2437/fac
+5:48(1:9.6)
+First Fac
+tree farm*1
+land 2
+$0.1218/fac
+--
+wood-0.35833
+--
+$0.0537
+--
+Every 04:00
+
+aluminum factory
+$3,750.00
+Consumes
+$0.04/fac
+Produces
+$0.48/fac
+Profit
+$0.44/fac
+1:4
+First Fac
+bauxite mine*1
+land 2
+$0.22/land
+--
+bauxite-1.2
+--
+$0.12
+--
+Every 00:25
+
+led factory
+$5,000.00
+Consumes
+$1/fac
+Produces
+$1.6/fac
+Profit
+$0.6/fac
+1:1
+First Fac
+silicon mine*2
+land 3
+$0.2/land
+Every 00:50
+
+polyester factory
+$6,000.00
+Consumes
+$0.44/fac
+Produces
+$1.12/fac
+Profit
+$0.68/fac
+4.4:1(22:5, 4.4:1)
+First Fac
+oil well*5
+land 6
+$0.1133/land
+--
+oil-0.6
+--
+$0.06
+--
+Every 00:25
+
+silicon mine
+$9,000.00
+Produces
+$0.5/fac
+Profit
+$0.5/fac
+$0.5/land
+Every 03:20
+
+bicycle factory
+$10,000.00
+Consumes
+$1.0666/fac
+$0.622/fac
+Produces
+$2.6666/fac
+Profit
+$0.9777/fac
+4.6666:3.5555:1((14:3, 4.6666:1), (32:9, 3.5555:1))
+First Fac
+steel mill*5
+rubber fac*4
+land 10
+$0.0977/land
+--
+steel-0.00952
+rubber-0.0111
+--
+$0.07619
+$0.0777
+--
+Every 01:30
+
+gold mine
+$20,000.00
+Produces
+$0.8/fac
+Profit
+$0.8/fac
+$0.8/land
+Every 05:00
+
+lamp factory
+$28,000.00
+Consumes
+$0.2/fac
+$1.6/fac
+Produces
+$3.3333/fac
+Profit
+$ 1.5333/fac
+1:1((1:20), (1:1))
+First Fac
+plastic fac*1
+led fac*1
+land 3
+$0.5111/land
+--
+plastic-7.6
+--
+$3.8
+--
+Every 00:15
+
+cotton farm
+$30,000.00
+Produces
+$1/fac
+Profit
+$1/fac
+$1/land
+Every 00:20
+
+plastic factory
+$50,000.00
+Consumes
+$0.08/fac
+Produces
+$4/fac
+Profit
+$3.92/fac
+4:5(1:1.25)
+First Fac
+oil well*1
+land 2
+$1.96/land
+--
+oil-0.2
+--
+$0.02
+--
+Every 00:25
+
+ccd factory
+$69,000.00
+Consumes
+$2.307/fac
+Produces
+$7.6923/fac
+Profit
+$5.3846/fac
+4.615:1(60:13, 4.615:1)
+First Fac
+silicon mine*5
+land 6
+$0.8974/land
+--
+silicon-0.00769
+--
+$0.1923
+--
+Every 01:05
+
+glass factory
+$80,000.00
+Consumes
+$1.4285/fac
+Produces
+$6.8571/fac
+Profit
+$5.4285/fac
+2.857:1(20:7, 2.857:1)
+First Fac
+silicon mine*3
+land 4
+$1.3571/land
+--
+silicon-0.00285
+--
+$0.0714
+--
+Every 00:35
+
+cpu factory
+$100,000.00
+Consumes
+$0.5/fac
+$1.6666/fac
+Produces
+$8.3333/fac
+Profit
+$6.1666/fac
+1:3.333:1((5:8, 1:1.6), (10:3,  3.333:1))
+First Fac
+gold mine*1
+silicon mine*4
+land 6
+$1.0277/land
+--
+gold-0.005
+silicon-0.0133
+--
+$0.3
+$0.3333
+--
+Every 02:00
+
+clothing factory
+$160,000.00
+Consumes
+$1/fac
+$1.25/fac
+Produces
+$7.5/fac
+Profit
+$5.25/fac
+1:1.25:1((25:28, 1:1.12), (5:4, 1.25:1))
+First Fac
+oil well*5
+polyester fac*1
+cotton farm*2
+land 4
+$1.3125/land
+--
+oil-0.6
+polyester-0.06
+cotton-0.15
+--
+$0.06
+$0.12
+$0.75
+--
+Every 00:40
+
+
+cell phone factory
+$400,000.00
+Consumes
+$0.0555/fac
+$0.6666/fac
+$4.4444/fac
+Produces
+$17.7777/fac
+Profit
+$12.6111/fac
+1:1:1:1((1:72), (7:72, 1:10.2857), (8:15, 1:1.875))
+First Fac
+oil well*1
+silicon mine*7
+gold mine*1
+plastic fac*1
+glass fac*1
+cpu fac*1
+land 13
+$0.9700/land
+--
+oil-0.2
+silicon-0.0161
+gold-0.005
+plastic-7.8888
+glass-0.2063
+cpu-0.01944
+--
+$0.02
+$0.4047
+$0.3
+$3.9444
+$6.1904
+$3.8888
+--
+Every 00:45
+
+coal power plant
+$500,000.00
+Consumes
+$0.3333/fac
+Produces
+$11.6666/fac
+Profit
+$11.3333/fac
+2.0833:1(25:12, 2.0833:1)
+First Fac
+coal mine*3
+land 4
+$2.8333/land
+--
+coal-0.7333
+--
+$0.1466
+--
+Every 00:30
+
+laptop factory
+$800,000.00
+Consumes
+$0.0444/fac
+$0.6666/fac
+$2.2222/fac
+Produces
+$22.2222/fac
+Profit
+$19.2888/fac
+1:1:1:1((1:90), (7:72, 1:10.2857), (4:15, 1:3.75))
+First Fac
+oil well*1
+silicon mine*7
+gold mine*1
+plastic fac*1
+glass fac*1
+cpu fac*1
+land 13
+$1.4837/land
+--
+oil-0.2
+silicon-0.0161
+gold-0.005
+plastic-7.9111
+glass-0.2063
+cpu-0.03055
+--
+$0.02
+$0.4047
+$0.3
+$3.9555
+$6.1904
+$6.1111
+--
+Every 01:30
+
+research chemical factory
+$800,000.00
+Consumes
+$0.0333/fac
+Produces
+$13.3333/fac
+Profit
+$13.3/fac
+1:3
+First Fac
+oil well*1
+land*2
+$6.65/land
+--
+oil-0.6666
+--
+$0.0666
+--
+Every 00:30
+
+solar power plant
+$1,000,000.00
+Produces
+$6.6666/fac
+Profit
+$6.6666/fac
+$6.6666/land
+Every 01:30
+
+rocket fuel factory
+$1,000,000.00
+Consumes
+$0.1111/fac
+Produces
+$0.1111/fac
+Profit
+$0/fac
+1:60
+First Fac
+solar power plant*1
+land 2
+$0/land
+--
+energy-0.6555
+--
+$6.5555
+--
+Every 15:00
+
+digital camera factory
+$1,400,000.00
+Consumes
+$6.25/fac
+$0.625/fac
+Produces
+$25/fac
+Profit
+$18.125/fac
+1:1:1((13:16, 1:1.2307), (5:32, 1:6.4))
+First Fac
+silicon mine*5
+oil well*1
+ccd fac*1
+plastic fac*1
+land 9
+$2.01388/land
+--
+silicon-0.00769
+oil-0.2
+--
+$0.1923
+$0.02
+--
+Every 01:20
+
+television factory
+$1,500,000.00
+Consumes
+$0.1/fac
+$2/fac
+$1.1111/fac
+Produces
+$22.2222/fac
+Profit
+$19.0111/fac
+1:1:1:1((1:40), (7:24, 1:3.4285), (2:15, 1:7.5))
+First Fac
+oil well*1
+silicon mine*7
+gold mine*1
+plastic fac*1
+glass fac*1
+cpu fac*1
+land 13
+$1.4623/land
+--
+oil-0.2
+silicon-0.0161
+gold-0.005
+plastic-7.8
+glass-0.1619
+cpu-0.03611
+--
+$0.02
+$0.4047
+$0.3
+$3.9
+$4.8571
+$7.2222
+--
+Every 03:00
+
+gasoline engine factory
+$2,000,000.00
+Consumes
+$0.4615/fac
+$0.1615/fac
+Produces
+$19.2307/fac
+Profit
+$18.6076/fac
+2.0192:1:1((105:52, 2.0192:1), (12:13, 1:1.0833))
+First Fac
+iron mine*2
+coal mine*1
+oil well*1
+steel mill*3
+rubber fac*1
+land 9
+$2.0675/land
+--
+coal-0.4571
+oil-0.8
+steel-0.0280
+rubber-0.0019
+--
+$0.0914
+$0.08
+$0.2241
+$0.0134
+--
+Every 04:20
+
+car factory
+$10,000,000.00
+Consumes
+$8.3333/fac
+$0.8333/fac
+$1.4/fac
+$0.5333/fac
+$0.3333/fac
+$0.35/fac
+Produces
+$33.3333/fac
+Profit
+$21.55/fac
+1:1:1:2.3333:1:2:1((13:30, 1:2.3076), (5:24, 1:4.8), (49:240, 1:4.8979), (7:3, 2.3333:1), (1:25), (2:1))
+First Fac
+iron mine*4
+coal mine*1
+oil well*2
+steel mill*3
+rubber fac*1
+silicon mine*7
+gold mine*1
+gasengine fac*1
+plastic fac*1
+glass fac*1
+steel mill*3
+cpu fac*1
+rubber fac*2
+land 28
+$0.7696/land
+--
+coal-0.1142
+steel-0.0280
+rubber-0.0019
+silicon-0.0161
+gold-0.005
+oil-0.6
+gasengine-0.0021
+plastic-6.3333
+glass-0.1819
+steel-0.0190
+cpu-0.04
+--
+$0.0228
+$0.2241
+$0.0134
+$0.4047
+$0.3
+$0.06
+$10.8974
+$0.3166
+$5.4571
+$0.1523
+$8
+--
+Every 10:00
+
+prescription drug factory
+$15,000,000.00
+Consumes
+$2/fac
+Produces
+$20/fac
+Profit
+$18/fac
+1:1(1:6.666)
+First Fac
+oil well*1
+res chem fac*1
+land 3
+$6/land
+--
+oil-0.6666
+res chem-0.1133
+--
+$0.0666
+$11.33
+--
+Every 00:50
+
+airport
+$20,000,000.00
+Consumes
+$0.8333-1.6666/fac
+$4.1666-3.3333/fac
+Produces
+$16.666-33.333/fac
+Profit
+$11.666-23.333/fac(Avar. $15.555/fac)
+1:1((N/A, jet fuel from market), (5:8-5:4, 1:1.6-1.25:1)(Avar. 5:6, 1:1.2))
+First Fac(logistics center always just need 1)
+(logistics ctr*1)
+solar power plant*1
+land 3/2
+$3.888-7.777/land(Avar. $5.185185/land)/
+$5.833-11.666/land(Avar. $7.777/land)
+--
+jet fuel-N/A(Can't calculate)
+energy-0.25--0.1666(This is negative)(Avar. 0.111)
+--
+jet fuel-N/A(Can't calculate)
+energy-2.5--1.6666(This is negative)(Avar. 1.111)
+--
+Every 01:00 to 00:30(Avar. 00:45)
