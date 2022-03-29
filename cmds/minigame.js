@@ -1,17 +1,73 @@
-const fetch = require("node-fetch");
-const cmdInfo = require("../cmdsinfo.json");
-
-module.exports = {
-	name: "minigame",
-	execute(message, args) {
-        args = args.map((a, b) => (!b)? Object.entries(cmdInfo["aliases"]["minigame"]).find(b => b[1].includes(a))?.[0] || a: a);
-        if (["generate", "profile", "shop", "buy", "info", "start"].includes(args[0]))
-            fetch("https://api.bit.io/api/v1beta/query/", {method: "POST", headers: {Accept: "application/json", "Content-Type": "application/json", Authorization: "Bearer 9Nen_UuTrFikB2Mpjw6r3ic3YVpd"}, body: JSON.stringify({query_string: "SELECT * FROM \"BenChueng0422/IdleCorp-Profit\".\"minigame\" WHERE user_id = \'"+message.author.id+"\';"})}).then(d => d.json()).then(dt => {
-                let data = dt["data"];
-                let pro = Promise.resolve();
-                if (data.length) pro = fetch("https://api.bit.io/api/v1beta/query/", {method: "POST", headers: {Accept: "application/json", "Content-Type": "application/json", Authorization: "Bearer 9Nen_UuTrFikB2Mpjw6r3ic3YVpd"}, body: JSON.stringify({query_string: "UPDATE \"BenChueng0422/IdleCorp-Profit\".\"minigame\" SET data = \'"+JSON.stringify(data[0][1])+"\'::JSON WHERE user_id = \'"+message.author.id+"\';"})});
-                return pro.then(() => require("./expan/minigame/"+args[0]).execute(message, args.slice(1)));
-            })
-        else message.channel.send("`EN1011`: Missing subcommand.");
+import { StringHandlers } from "../funcs/StringHandlers";
+const Command = {
+    name: "minigame",
+    aliases: ["mg", "game"],
+    syntax: "minigame {generate|profile|shop|buy} [...]",
+    description: "A minigame.",
+    subcommands: {
+        buy: {
+            name: "buy",
+            aliases: ["b"],
+            syntax: "minigame buy <asset Id>",
+            description: "Buying assets for generation."
+        },
+        generate: {
+            name: "generate",
+            aliases: ["gen", "g"],
+            syntax: "minigame generate",
+            description: "Generating energy by generator."
+        },
+        info: {
+            name: "info",
+            aliases: ["i", "if"],
+            syntax: "minigame info",
+            description: "Getting the information about the minigame."
+        },
+        profile: {
+            name: "profile",
+            aliases: ["p", "pf", "c"],
+            syntax: "minigame profile",
+            description: "Getting the profile of a player from the minigame."
+        },
+        shop: {
+            name: "shop",
+            aliases: ["s", "store"],
+            syntax: "minigame shop",
+            description: "Viewing the assets that are buyable."
+        },
+        start: {
+            name: "start",
+            aliases: [],
+            syntax: "minigame start",
+            description: "Starting the minigame by initializing the player profile."
+        }
+    },
+    args: [
+        ["<asset>", "The asset Id in the minigame. The Ids are shown in `minigame shop`."]
+    ],
+    manual: {
+        description: "You can play the minigame in this bot via this command.",
+        examples: [
+            "minigame start"
+        ]
+    },
+    execute(message, args, extra) {
+        if (!args.length)
+            return message.channel.send(`Subcommands: \`buy\`, \`generate\`, \`info\`, \`profile\`, \`shop\`, \`start\`.`);
+        args[0] = StringHandlers.findCmdName(args[0], Command.subcommands);
+        switch (args[0]) {
+            case "generate":
+            case "profile":
+            case "shop":
+            case "buy":
+            case "info":
+            case "start":
+                import("./expan/minigame/" + args[0]).then(m => m(message, args.slice(1), extra));
+                break;
+            default:
+                message.channel.send("`EN1012`: Invalid subcommand.");
+        }
     }
-}
+};
+export { Command };
+//# sourceMappingURL=minigame.js.map

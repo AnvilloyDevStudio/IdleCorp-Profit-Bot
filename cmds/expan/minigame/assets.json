@@ -1,0 +1,32 @@
+[
+    {
+        "id": "0-0",
+        "name": "Hand-cranked generator MK2",
+        "price": 10,
+        "generateRate": 3
+    },
+    {
+        "id": "0-1",
+        "name": "Hand-cranked generator MK3",
+        "price": 30,
+        "generateRate": 6
+    },
+    {
+        "id": "0-2",
+        "name": "Hand-cranked generator MK4",
+        "price": 60,
+        "generateRate": 15
+    },
+    {
+        "id": "0-3",
+        "name": "Bicycle generator",
+        "price": 100,
+        "generateRate": 20
+    },
+    {
+        "id": "0-4",
+        "name": "Bicycle generator MK2",
+        "price": 150,
+        "generateRate": 50
+    }
+]

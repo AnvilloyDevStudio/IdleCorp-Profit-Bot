@@ -1,0 +1,11 @@
+import * as Discord from "discord.js";
+
+export default (message: Discord.Message, args: import("../../../types/command").Input, extra: import("../../../types/command").extraArgs) => {
+    const userID = message.author.id;
+    extra.database.query<{count: number}>("SELECT COUNT(*) FROM \"minigame\" WHERE userid = \'"+userID+"\';").then(data => {
+        if (data) return message.channel.send("`EN0131`: The profile has already been existed. You have alerady started the minigame.");
+        extra.database.query<{count: number}>("SELECT COUNT(*) FROM \"minigame\";").then(data => {
+            extra.database.query(`INSERT INTO \"minigame\" VALUES (\'${message.author.id}\', \'${data.rows[0].count}\', 0, \'[]\', ${Date.now()})`).then(() => message.channel.send("The minigame profile has been created."));
+        })
+    })
+}

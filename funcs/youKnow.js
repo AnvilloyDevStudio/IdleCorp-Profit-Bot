@@ -1,17 +1,20 @@
-const ykl = require("../you_know.json");
-
-module.exports = class youKnow {
+import ykl from "../you_know.json";
+import setting from "../setting.json";
+import * as Discord from "discord.js";
+class youKnow {
     static this() {
-        return ykl["list"][~~(Math.random()*ykl["list"].length)];
+        return ykl["list"][~~(Math.random() * ykl["list"].length)];
     }
-    static embed(embed) {
-        message.channel.send(new Discord.MessageEmbed()
-                .setTitle("Did you know")
-                .setColor([85, 85, 85])
-                .setTimestamp()
-                .setDescription(youKnow())
-                .setAuthor(message.client.user.username, message.client.user.displayAvatarURL())
-                .setFooter(message.client.user.username+" | "+setting["version"], message.client.user.displayAvatarURL())
-            ).then(msg => setTimeout(() => msg.edit(embed), 3000))
+    static embed(embed, message) {
+        return message.channel.send({ embeds: [new Discord.MessageEmbed()
+                    .setTitle("Did you know")
+                    .setColor([85, 85, 85])
+                    .setTimestamp()
+                    .setDescription(youKnow.this())
+                    .setAuthor({ name: message.client.user.username, iconURL: message.client.user.displayAvatarURL() })
+                    .setFooter({ text: message.client.user.username + " | " + setting.version, iconURL: message.client.user.displayAvatarURL() })
+            ] }).then(msg => { setTimeout(() => msg.edit({ embeds: [embed] }), 3000); return msg; });
     }
 }
+export { youKnow };
+//# sourceMappingURL=youKnow.js.map

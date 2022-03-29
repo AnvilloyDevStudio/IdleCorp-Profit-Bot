@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "module": "ES2022",
+        "sourceMap": true,
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true
+    }
+}

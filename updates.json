@@ -11,7 +11,7 @@
             },
             "deletes": {}
         },
-        "others": ["Better UI in `speed` and `profit` commands"],
+        "other": ["Better UI in `speed` and `profit` commands"],
         "plans to update": {
             "commands": {
                 "facilities info": "undecided",
@@ -38,9 +38,7 @@
             },
             "deletes": {}
         },
-        "other": {
-            "Stats system": "Now will show the task stats (wait a second, isn't it status?) non-inline, anyway, that's will make it looks better."
-        },
+        "other": ["Stats system -- Now will show the task stats (wait a second, isn't it status?) non-inline, anyway, that's will make it looks better."],
         "plans to update": {
             "commands": {
                 "facilities info": "undecided",

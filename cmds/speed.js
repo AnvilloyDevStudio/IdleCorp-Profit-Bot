@@ -1,85 +1,123 @@
-const Discord = require("discord.js");
-const setting = require("../setting.json");
-const StringHandlers = require("../funcs/StringHandlers");
-const icals = require("../icaliases.json");
-const NumberHandlers = require("../funcs/NumberHandlers");
-const calculate = require("../funcs/calculate");
-const youKnow = require("../funcs/youKnow");
-const fs = require("fs");
-
-module.exports = {
-	name: "speed",
-	execute(message, args) {
-        if (!args.length) return message.channel.send("`EN0001`: Missing facility name.")
-        let num = (args.slice(-1)[0].match(/^\d+[kmb]?$/))? args.pop(): 1,
-        unit, region, icd;
-        if (["--version:", "--v:", "--ver:"].some(a => args[0].toLowerCase().startsWith(a))) {
-            let flag = args.shift().split(":")[1].toLowerCase();
-            if (fs.readdirSync("./icdetailvers").map(a => a.slice(9, -5)).includes(flag)) icd = require("../icdetailvers/icdetail_"+flag+".json");
-            else return message.channel.send("`EN0022`: The IdleCorp source version was invalid.");
-        }  else icd = require("../icdetailvers/"+fs.readdirSync("./icdetailvers").slice(-1)[0])
-        if (["--rm:", "--regionmodifier:", "--modifier:", "--mod:"].some(a => args[0].toLowerCase().startsWith(a))) {
-            let flag = args.shift().split(":")[1].toLowerCase();
-            if (["hq", "icp", "idlecorp", "idlecorpprofit", "idlecorphq"].includes(flag)) region = {"idlecorp": "hq", "idlecorphq": "hq", "idlecorpprofit": "icp"}[flag]??flag;
-            else return message.channel.send("`EN0022`: The region name was invalid.");
+import * as Discord from "discord.js";
+import setting from "../setting.json";
+import { StringHandlers } from "../funcs/StringHandlers";
+import icals from "../icaliases.json";
+import { NumberHandlers } from "../funcs/NumberHandlers";
+import { calculate } from "../funcs/calculate";
+import { youKnow } from "../funcs/youKnow";
+import ICDetails from "../icdetails.json";
+import { APIListener } from "../funcs/APIListener";
+import { IdleCorpConnection } from "../funcs/IdleCorpConnection";
+import Decimal from "decimal.js";
+const Command = {
+    name: "speed",
+    aliases: ["sp"],
+    syntax: "speed [--region:<region ID>] [--<time unit>] <facility> [<amount>]",
+    description: "Calculating the speed of the facilities.",
+    args: [
+        ["[--region:<region ID>>]", "The optional parameter that specifies the regional production effects for facilities."],
+        ["[--<time unit>]", "The time unit of the result. Available time unit: \"second\", \"minute\", \"hour\", \"day\". Defaults with second."],
+        ["<facility>", "The specific facility needed to be calculated."],
+        ["[<amount>]", "The specific amount of the specific facility in the calculation, defaults with 1."]
+    ],
+    argaliases: [
+        ["--region:", ["--modifiers:", "--mods:"]],
+        ["second", ["sec", "s"]],
+        ["minute", ["min", "m"]],
+        ["hour", ["hr", "h"]],
+        ["day", ["d"]]
+    ],
+    manual: {
+        description: "This command is used to calculate the production speeds of the specific facility.",
+        examples: [
+            "speed steel mill",
+            "speed --region:801019800682758145 steel mill",
+            "speed --day drug fac 20"
+        ]
+    },
+    execute(message, args, extra) {
+        if (!args.length)
+            return message.channel.send("`EN0001`: Missing facility name.");
+        let regionId = null;
+        if (["--region:", "--modifiers:", "--mods:"].some(a => args[0].toLowerCase().startsWith(a))) {
+            regionId = args.shift().split(":")[1];
         }
+        let num = (args[args.length - 1].match(/^\d+[kmb]?$/)) ? NumberHandlers.numalias(args.pop()) : 1, unit = "second";
         if (args[0].startsWith("--")) {
             let flag = args.shift().toLowerCase().slice(2);
-            const flagals = {"sec": "second", "s": "second", "min": "minute", "m": "minute", "hr": "hour", "h": "hour", "d": "day"}
-            if (flag in flagals) flag = flagals[flag], unit = flag;
-            else if (!["second", "minute", "hour", "day"].includes(flag)) return message.channel.send("`EN0012`: Invalid flag.");
-        } else unit = "second";
-        fac = args.join(" ").toLowerCase();
-        if (!(fac.replaceAll(" ", "_") in icd["facilities"])) fac = Object.entries(icals["ic"]["facilities"]).find(a => (a[1]?.includes(fac)))?.[0];
-        else fac = fac.replaceAll(" ", "_")
-        if (!(fac in icd["facilities"])) return message.channel.send("`EN0002`: Invalid facility: "+args.join(" "));
-        if (typeof(num) === "string") num = NumberHandlers.numalias(num);
-        calculate.productSpeed(fac, "all", num, Boolean(region), region, icd).then(sol => {
-            let cspd, cssp, pdpd, pdsp;
-            if (sol[0] === "None") cspd = "None";
-            else {
-                cspd = Object.keys(sol[0]);
-                cssp = Object.values(sol[0]);
-            }
-            if (sol[1] !== "None") {
-                pdpd = Object.keys(sol[1]);
-                pdsp = Object.values(sol[1]);
-            } else pdpd = "None";
+            const flagals = { "sec": "second", "s": "second", "min": "minute", "m": "minute", "hr": "hour", "h": "hour", "d": "day" };
+            if (flag in flagals)
+                flag = flagals[flag], unit = flag;
+            else if (!["second", "minute", "hour", "day"].includes(flag))
+                return message.channel.send("`EN0012`: Invalid time unit detected.");
+        }
+        let fac = args.join(" ").toLowerCase();
+        if (!(fac.replaceAll(" ", "_") in ICDetails["facilities"]))
+            fac = Object.entries(icals["ic"]["facilities"]).find(a => (a[1].includes(fac)))?.[0];
+        else
+            fac = fac.replaceAll(" ", "_");
+        if (!(fac in ICDetails["facilities"]))
+            return message.channel.send("`EN0002`: Invalid facility: " + args.join(" ") + ".");
+        const facDetail = fac !== "airport" ? Object.assign({}, ICDetails.facilities[fac]) : { ...ICDetails.facilities.airport, speed: 20 };
+        let modpro = Promise.resolve();
+        if (regionId)
+            modpro = APIListener.DiscordAuthorization.getAuthbyID(extra.database, message.author.id).then(auth => {
+                if (!auth) {
+                    const state = Date.now().toString() + "-" + message.author.id;
+                    const listener = new APIListener.DiscordAuthorization(extra.database, state);
+                    return new Promise(rs => message.channel.send({ embeds: [new Discord.MessageEmbed().setTitle("Discord account authorization").setURL(APIListener.DiscordAuthorization.authString + state)] }).then(msg => {
+                        listener.on("timeout", () => {
+                            msg.edit({ embeds: [new Discord.MessageEmbed().setTitle("Authorization Timeout").setDescription("Calculating without regional modifiers instead...").setColor("RED").setTimestamp()] });
+                            rs();
+                            listener.removeAllListeners();
+                        });
+                        listener.on("authorized", auth => {
+                            IdleCorpConnection.getRegionalModifiers(auth.token, regionId, fac).then(b => {
+                                if (b === null)
+                                    msg.edit({ embeds: [new Discord.MessageEmbed().setTitle("Invalid Region ID").setDescription("Calculating without regional modifiers instead...").setColor("RED").setTimestamp()] });
+                                else
+                                    facDetail.speed = Math.round(new Decimal(b).mul(facDetail.speed).toNumber());
+                                rs();
+                            });
+                            listener.removeAllListeners();
+                        });
+                    }));
+                }
+                else {
+                    return IdleCorpConnection.getRegionalModifiers(auth.token, regionId, fac).then(b => { facDetail.speed = Math.round(new Decimal(b).mul(facDetail.speed).toNumber()); });
+                }
+            });
+        modpro.then(() => {
+            const sol = calculate.productSpeed(facDetail, "all", num);
             let s = [], c, p;
-            if (cspd !== "None") {
-                for (let a of cspd.map((a, b) => [a, cssp[b]])) {
-                    a[1] = a[1].split(".");
-                    s.push("**"+StringHandlers.capitalize(a[0]).replaceAll("_", " ")+"**"+" | "+Number(a[1][0]).toLocaleString("en-US").toString()+((a[1][1])? "."+a[1].slice(1).join("."): ".00"));
+            if (sol[0] !== null) {
+                for (let a of Object.entries(sol[0])) {
+                    const aa = a[1].split(".");
+                    s.push("> **" + StringHandlers.capitalize(a[0]).replaceAll("_", " ") + "**" + " | " + NumberHandlers.numberToLocaleString(parseInt(aa[0])) + ((aa[1]) ? "." + aa[1] : ".00"));
                 }
-                c = s.join("\n")
-            } else c = "None";
-            s = [];
-            if (pdpd !== "None") {
-                for (let a of pdpd.map((a, b) => [a, pdsp[b]])) {
-                    a[1] = a[1].split(".")
-                    s.push("**"+StringHandlers.capitalize(a[0]).replaceAll("_", " ")+"**"+" | "+Number(a[1][0]).toLocaleString("en-US").toString()+((a[1][1])? "."+a[1].slice(1).join("."): ".00"));
-                }
-                p = s.join("\n");
+                c = s.join("\n");
             }
-            else p = "None";
-            embed = new Discord.MessageEmbed()
+            else
+                c = "> None";
+            s = [];
+            for (let a of Object.entries(sol[1])) {
+                const aa = a[1].split(".");
+                s.push("> **" + StringHandlers.capitalize(a[0]).replaceAll("_", " ") + "**" + " | " + NumberHandlers.numberToLocaleString(parseInt(aa[0])) + ((aa[1]) ? "." + aa[1] : ".00"));
+            }
+            p = s.join("\n");
+            const embed = new Discord.MessageEmbed()
                 .setTitle(StringHandlers.capitalize(fac).replaceAll("_", " "))
                 .setColor("BLUE")
-                .setDescription("Unit: "+StringHandlers.capitalize(unit))
+                .setDescription("Unit: " + StringHandlers.capitalize(unit))
                 .setTimestamp()
-                .setAuthor(message.client.user.username, message.client.user.displayAvatarURL())
-                .addFields([{name: "Consumes", value: c, inline: false},
-                    {name: "Produces", value: p, inline: false},
-                    {name: "Note", value: "The result of this command is for calculation the basic values only, The actual production speeds may vary", inline: false}])
-                .setFooter(message.client.user.username+" | "+setting["version"], message.client.user.displayAvatarURL());
-            message.channel.send(new Discord.MessageEmbed()
-                .setTitle("Did you know")
-                .setColor([85, 85, 85])
-                .setTimestamp()
-                .setDescription(youKnow.this())
-                .setAuthor(message.client.user.username, message.client.user.displayAvatarURL())
-                .setFooter(message.client.user.username+" | "+setting["version"], message.client.user.displayAvatarURL())
-            ).then(msg => setTimeout(() => msg.edit(embed), 3000))
-        })
+                .setAuthor({ name: message.client.user.username, iconURL: message.client.user.displayAvatarURL() })
+                .addFields([{ name: "Consumes", value: c, inline: false },
+                { name: "Produces", value: p, inline: false },
+                { name: "Note", value: "The result of this command is for calculation the basic values only, The actual production speeds may vary", inline: false }])
+                .setFooter({ text: message.client.user.username + " | " + setting["version"], iconURL: message.client.user.displayAvatarURL() });
+            youKnow.embed(embed, message);
+        });
     }
-}
+};
+export { Command };
+//# sourceMappingURL=speed.js.map

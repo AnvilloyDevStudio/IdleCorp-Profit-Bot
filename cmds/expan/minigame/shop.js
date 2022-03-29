@@ -1,13 +1,11 @@
-const Discord = require("discord.js");
-const setting = require("../../../setting.json");
-const StringHandlers = require("../../../funcs/StringHandlers");
-
-module.exports = {
-    execute(message, args) {
-        message.channel.send(new Discord.MessageEmbed()
-            .setTitle("Minigame shop")
-            .setDescription("`1` 10 energy -- Hand-cranked generator MK2\n`2` 30 energy -- Hand-cranked generator MK3\n`3` 60 energy -- Hand-cranked generator MK4\n`4` 100 energy -- Bicycle generator\n`5` 150 energy -- Bicycle generator MK2")
-            .setTimestamp()
-            .setFooter(message.client.user.username+" | "+setting["version"], message.client.user.displayAvatarURL()));
-    }
-}
+import * as Discord from "discord.js";
+import setting from "../../../setting.json";
+import GameAssets from "./assets.json";
+export default (message, args, extra) => {
+    message.channel.send({ embeds: [new Discord.MessageEmbed()
+                .setTitle("Minigame shop")
+                .setDescription(GameAssets.map((a, b) => `\`${b + 1}\` ${a.price} energy -- ${a.name}`).join("\n"))
+                .setTimestamp()
+                .setFooter({ text: message.client.user.username + " | " + setting.version, iconURL: message.client.user.displayAvatarURL() })] });
+};
+//# sourceMappingURL=shop.js.map

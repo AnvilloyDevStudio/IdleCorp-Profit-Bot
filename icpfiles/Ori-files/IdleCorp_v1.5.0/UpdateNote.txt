@@ -1,2 +1,0 @@
-Change Readme.md
-Update Profit.txt -- with asset+ product chance

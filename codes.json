@@ -52,52 +52,5 @@
             "EN2221": "An error from database respond, this bug still cannot be solved until the host is paid. More detail: https://discord.com/channels/801019800682758145/916618404507549697/916619871889031189 Section \"Bot limitation and future\"."
         }
     },
-    "oldnew": {
-        "beta": {
-            "Up-12D2111": "UD02101",
-            "Up-12D2112": "UD04101"
-        },
-        "1.3.0": {
-            "EN0301": "EN0111",
-            "EN0302": "EN0112",
-            "EN0001": "EN0011",
-            "EN0004": "EN0002",
-            "EN0005": "EN0001",
-            "EN0006": "EN0002",
-            "EN0007": "EN0003"
-        }
-    },
-    "oldver": {
-        "beta": {
-            "update": {
-                "Up-12D2111": "From send respectively become in one message.",
-                "Up-12D2112": "Added the command `listcogs` into `history`"
-            }
-        },
-        "1.0": {
-            "error": {
-                "EN0008": "Appeared unexpect argument type"
-            }
-        },
-        "1.3.0": {
-            "error": {
-                "EN1001": "`codes <update|error>`: Entered code is invalid.",
-                "EN0301": "Need permission role: \"ICP Developer\" or \"Owner\".",
-                "EN1002": "`code`: If the code starts with \"U\", it's belongs to update, if it's \"E\", it's belongs to error.",
-                "EN0302": "Need permission role: \"Admin\".",
-                "EN0001": "Flags error, flags must be starts with \"--\" or \"-\", looks for the requirement.",
-                "EN0002": "Flags error, the number of flags is invalid.",
-                "EN0003": "Flag(s) is/are invalid.",
-                "EN0004": "Check the name(s) (or/and number(s)) you entered is valid (If it's flag, mark it as flag mark(`-`/`--`), if it's a bug, report it) or it's not a bug.",
-                "EN0401": "Appeared multiple result when checking.",
-                "EN0005": "Missing argument(s) or name(s) or flag(s).",
-                "EN0006": "The number(s) argument(s) is invalid.",
-                "EN0007": "The argument(s) location(s) or type or numbers or argument(s) wrong.",
-                "EN0008": "Appeared unexpect argument type.",
-                "EN0402": "Cannot find aliases for some special cases.",
-                "ED1001": "`task add`: The task was exixt in tasks list."
-            }
-        }
-    },
     "version": "1.4.0"
 }

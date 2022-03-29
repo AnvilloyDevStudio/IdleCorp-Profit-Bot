@@ -5,9 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Node.js: Launch Program",
+            "name": "Node.js: Launch Program File",
             "program": "${file}",
             "request": "launch",
+            // "skipFiles": [
+            //     "<node_internals>/**"
+            // ],
+            "console": "externalTerminal",
+            "type": "pwa-node"
+        },
+        {
+            "name": "Node.js: Launch Program",
+            "request": "launch",
+            "args": ["--experimental-json-modules", "--trace-warnings", "--trace-uncaught", "--experimental-specifier-resolution=node", "main.js"],
             // "skipFiles": [
             //     "<node_internals>/**"
             // ],
