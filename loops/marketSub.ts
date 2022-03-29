@@ -8,7 +8,6 @@ export default async (client: import("discord.js").Client, database: import("pg"
         try {
             const now = lastCheck;
             lastCheck = Date.now();
-            database.query("UPDATE lastchecks SET lastcheck = \'"+lastCheck+"\' WHERE name = \'marketsub\';");
             IdleCorpConnection.market.recent().then(mk => {
                 database.query<{userid: string, subscription: [string[], string[]]}>("SELECT * FROM market_sub;").then(dt => {
                     for (const recent of mk.filter(a => a.timestamp>=now))
@@ -18,6 +17,7 @@ export default async (client: import("discord.js").Client, database: import("pg"
                                 else if (recent.isBuyOffer&&subs.subscription[1].includes(recent.itemId)) dm.send({embeds: [new Discord.MessageEmbed().setTitle("New Market Buy Offer").setTimestamp().setDescription(recent.amount+" of "+recent.itemId.replaceAll("_", " ")+" with price $"+new Decimal(recent.price).div(100).toFixed(2)+".")]})
                             })
                         }
+                    database.query("UPDATE lastchecks SET lastcheck = \'"+lastCheck+"\' WHERE name = \'marketsub\';");
                 }).catch(e => {
                     clearInterval(int);
                     console.error(e)

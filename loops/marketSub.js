@@ -7,7 +7,6 @@ export default async (client, database) => {
         try {
             const now = lastCheck;
             lastCheck = Date.now();
-            database.query("UPDATE lastchecks SET lastcheck = \'" + lastCheck + "\' WHERE name = \'marketsub\';");
             IdleCorpConnection.market.recent().then(mk => {
                 database.query("SELECT * FROM market_sub;").then(dt => {
                     for (const recent of mk.filter(a => a.timestamp >= now))
@@ -19,6 +18,7 @@ export default async (client, database) => {
                                     dm.send({ embeds: [new Discord.MessageEmbed().setTitle("New Market Buy Offer").setTimestamp().setDescription(recent.amount + " of " + recent.itemId.replaceAll("_", " ") + " with price $" + new Decimal(recent.price).div(100).toFixed(2) + ".")] });
                             });
                         }
+                    database.query("UPDATE lastchecks SET lastcheck = \'" + lastCheck + "\' WHERE name = \'marketsub\';");
                 }).catch(e => {
                     clearInterval(int);
                     console.error(e);
