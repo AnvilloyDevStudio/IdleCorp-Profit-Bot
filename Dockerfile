@@ -12,4 +12,4 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 EXPOSE 4000
-CMD ["node", "--experimental-json-modules", "--trace-warnings", "--trace-uncaught", "--experimental-specifier-resolution=node", "main".js"]
+CMD ["node", "--experimental-json-modules", "--trace-warnings", "--trace-uncaught", "--experimental-specifier-resolution=node", "main.js"]
