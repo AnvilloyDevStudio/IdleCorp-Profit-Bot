@@ -5,6 +5,8 @@
 
 This is a bot under the IdleCorp Profit project, providing general supports for playing IdleCorp.
 
+This project has not been updated since I published the version 1.3.0 of this bot before I decided to publish this.
+
 ## Note
 
 By 2024/09/14 (UTC), the commits are edited so that a password is hidden for serious security,
