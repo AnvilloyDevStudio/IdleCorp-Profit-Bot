@@ -14,9 +14,15 @@ So, I may archive this project later, including the corresponding repositories.
 
 For some more information, you may head to [the Google Site](https://sites.google.com/view/idlecorpprofit).
 
+## History
+
+Originally, this project started by txt files before there is a Discord bot. Then,
+after a few updates on the files, the first version of the bot came out, it was
+written in Python.
+
 ## Note
 
 By 2024/09/14 (UTC), the commits are edited so that a password is hidden for serious security,
 but the bot tokens have been invalidated. bit.io is not longer used since 1.3.0,
-so the exposure should be safe enough. Still, this project is in a mess, but
+so the exposure should be safe enough. (It is now also discontinued.) Still, this project is in a mess, but
 this should be enough for code publishing.
