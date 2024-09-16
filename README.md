@@ -3,7 +3,13 @@
 > [!IMPORTANT]
 > This project is no longer active.
 
+## Information
+
 This is a bot under the IdleCorp Profit project, providing general supports for playing IdleCorp.
+
+For some more information, you may head to [the Google Site](https://sites.google.com/view/idlecorpprofit).
+
+## Current State & Future
 
 This project has not been updated since I published the version 1.3.0 of this bot before I decided to publish this.
 
@@ -12,7 +18,8 @@ reach out me for the collaboration of this project where I will see if it is a g
 work on this project due to the time cost and availability. There is also a reason that I no longer played this game.
 So, I may archive this project later, including the corresponding repositories.
 
-For some more information, you may head to [the Google Site](https://sites.google.com/view/idlecorpprofit).
+However, it is possible to create an organization for this project with people who are interested in participating this
+IdleCorp Profit project, although it still needs a group of people of the players first.
 
 ## History
 
