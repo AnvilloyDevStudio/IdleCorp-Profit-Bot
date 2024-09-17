@@ -7,6 +7,7 @@
 ## Information
 
 This is a bot under the IdleCorp Profit project, providing general supports for playing IdleCorp.
+This is a thrid-party fan project independent on IdleCorp and its creator, Teemaw.
 
 For some more information, you may head to [the Google Site](https://sites.google.com/view/idlecorpprofit).
 
