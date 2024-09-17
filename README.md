@@ -93,7 +93,8 @@ maintanence.
 
 ## Acknowledgement
 
-Teemaw, for developing and hosting the game bot, IdleCorp, leading me to start this my first long code project.
+**Teemaw**, a great gratitude, for developing and hosting such a good game bot, IdleCorp, fun to play, and
+also leading me to start this my first long code project.
 
 Server members, for showing supports and engagement for the development of both the project and the bots.
 
