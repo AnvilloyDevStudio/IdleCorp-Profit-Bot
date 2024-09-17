@@ -10,7 +10,7 @@ This is a bot under the IdleCorp Profit project, providing general supports for 
 
 For some more information, you may head to [the Google Site](https://sites.google.com/view/idlecorpprofit).
 
-There are also some files stored in [https://github.com/AnvilloyDevStudio/IdleCorp-Profit-project](another repository).
+There are also some files stored in [another repository](https://github.com/AnvilloyDevStudio/IdleCorp-Profit-project).
 
 ## Current State & Future
 
@@ -84,11 +84,11 @@ maintanence.
 
 ## Repository Links
 
-- [https://github.com/AnvilloyDevStudio/IdleCorp-Profit-Bot-Legacy](IdleCorp Profit Bot Legacy):
+- [IdleCorp Profit Bot Legacy](https://github.com/AnvilloyDevStudio/IdleCorp-Profit-Bot-Legacy):
   The Python code of this bot before the migration in v1.1.0.
-- [https://github.com/AnvilloyDevStudio/IdleCorp-Profit-Bot-Lite](IdleCorp Profit Bot Lite):
+- [IdleCorp Profit Bot Lite](https://github.com/AnvilloyDevStudio/IdleCorp-Profit-Bot-Lite):
   The Lite version of this bot, for wide usage of bot.
-- [https://github.com/AnvilloyDevStudio/IdleCorp-Profit-project](IdleCorp Profit project):
+- [IdleCorp Profit project](https://github.com/AnvilloyDevStudio/IdleCorp-Profit-project):
   The archive of related files, including the past releases of this project.
 
 ## Acknowledgement
