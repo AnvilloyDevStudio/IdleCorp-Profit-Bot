@@ -1,7 +1,7 @@
 # IdleCorp Profit Bot
 
 > [!IMPORTANT]
-> This project is no longer active.
+> This project is no longer active and has been formally archived by 2024/10/12 (UTC).
 > For the details, you may read the below.
 
 ## Information
@@ -17,15 +17,12 @@ There are also some files stored in [another repository](https://github.com/Anvi
 
 This project has not been updated since I published the version 1.3.0 of this bot before I decided to publish this.
 
-If there is anyone interested in this project, you may either make a fork/copy and start from the code or
-reach out me for the collaboration of this project where I will see if it is a good idea. At the moment, I decided not to continue
-work on this project due to the time cost and availability. There is also a reason that I no longer played this game.
-So, I may archive this project later, including the corresponding repositories.
+If there is anyone interested in this project, you may make a fork/copy and start from the code.
+After the time of decision, I came to the conclusion to not continue
+working on this project due to the time cost and availability. There is also a reason that I no longer played this game.
+So, I archived this project, including the corresponding repositories.
 
-However, it is possible to create an organization for this project with people who are interested in participating this
-IdleCorp Profit project, although it still needs a group of people of the players first.
-
-At the moment, the Python and the Lite versions are archived. The Python one is pretty old, and the Lite one is
+Some time ago, the Python and the Lite versions had been archived. The Python one is pretty old, and the Lite one is
 still written in JavaScript but not TypeScript. Still, this version has already covered the functionalities
 implemented in either versions. You may still try to run if you like to, but for this version, you may need
 some fixes as this relies on a database for some server-related or region-related functions.
